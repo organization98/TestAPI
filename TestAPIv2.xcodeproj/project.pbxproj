@@ -14,8 +14,8 @@
 		32882D121A73E38000FE63C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32882D111A73E38000FE63C5 /* Images.xcassets */; };
 		32882D151A73E38000FE63C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32882D131A73E38000FE63C5 /* LaunchScreen.xib */; };
 		32882D211A73E38000FE63C5 /* TestAPIv2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D201A73E38000FE63C5 /* TestAPIv2Tests.m */; };
-		32882D2E1A73E4A300FE63C5 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D2B1A73E4A300FE63C5 /* NetworkManager.m */; };
-		32882D2F1A73E4A300FE63C5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D2D1A73E4A300FE63C5 /* User.m */; };
+		32882D2E1A73E4A300FE63C5 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D2B1A73E4A300FE63C5 /* RequestManager.m */; };
+		32882D2F1A73E4A300FE63C5 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D2D1A73E4A300FE63C5 /* Response.m */; };
 		32882D441A73E4D600FE63C5 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D321A73E4D600FE63C5 /* AFHTTPRequestOperation.m */; };
 		32882D451A73E4D600FE63C5 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D341A73E4D600FE63C5 /* AFHTTPRequestOperationManager.m */; };
 		32882D461A73E4D600FE63C5 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32882D361A73E4D600FE63C5 /* AFHTTPSessionManager.m */; };
@@ -59,10 +59,10 @@
 		32882D1A1A73E38000FE63C5 /* TestAPIv2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAPIv2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32882D1F1A73E38000FE63C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32882D201A73E38000FE63C5 /* TestAPIv2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAPIv2Tests.m; sourceTree = "<group>"; };
-		32882D2A1A73E4A300FE63C5 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		32882D2B1A73E4A300FE63C5 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		32882D2C1A73E4A300FE63C5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		32882D2D1A73E4A300FE63C5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		32882D2A1A73E4A300FE63C5 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		32882D2B1A73E4A300FE63C5 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		32882D2C1A73E4A300FE63C5 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		32882D2D1A73E4A300FE63C5 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
 		32882D311A73E4D600FE63C5 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		32882D321A73E4D600FE63C5 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		32882D331A73E4D600FE63C5 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -143,12 +143,12 @@
 			children = (
 				32882D081A73E38000FE63C5 /* AppDelegate.h */,
 				32882D091A73E38000FE63C5 /* AppDelegate.m */,
+				32882D2A1A73E4A300FE63C5 /* RequestManager.h */,
+				32882D2B1A73E4A300FE63C5 /* RequestManager.m */,
+				32882D2C1A73E4A300FE63C5 /* Response.h */,
+				32882D2D1A73E4A300FE63C5 /* Response.m */,
 				32882D0B1A73E38000FE63C5 /* ViewController.h */,
 				32882D0C1A73E38000FE63C5 /* ViewController.m */,
-				32882D2A1A73E4A300FE63C5 /* NetworkManager.h */,
-				32882D2B1A73E4A300FE63C5 /* NetworkManager.m */,
-				32882D2C1A73E4A300FE63C5 /* User.h */,
-				32882D2D1A73E4A300FE63C5 /* User.m */,
 				32882D0E1A73E38000FE63C5 /* Main.storyboard */,
 				32882D111A73E38000FE63C5 /* Images.xcassets */,
 				32882D131A73E38000FE63C5 /* LaunchScreen.xib */,
@@ -352,10 +352,10 @@
 				32882D641A73E4E100FE63C5 /* UIProgressView+AFNetworking.m in Sources */,
 				32882D4C1A73E4D600FE63C5 /* AFURLSessionManager.m in Sources */,
 				32882D4A1A73E4D600FE63C5 /* AFURLRequestSerialization.m in Sources */,
-				32882D2F1A73E4A300FE63C5 /* User.m in Sources */,
+				32882D2F1A73E4A300FE63C5 /* Response.m in Sources */,
 				32882D651A73E4E100FE63C5 /* UIRefreshControl+AFNetworking.m in Sources */,
 				32882D4B1A73E4D600FE63C5 /* AFURLResponseSerialization.m in Sources */,
-				32882D2E1A73E4A300FE63C5 /* NetworkManager.m in Sources */,
+				32882D2E1A73E4A300FE63C5 /* RequestManager.m in Sources */,
 				32882D631A73E4E100FE63C5 /* UIImageView+AFNetworking.m in Sources */,
 				32882D0D1A73E38000FE63C5 /* ViewController.m in Sources */,
 				32882D611A73E4E100FE63C5 /* UIAlertView+AFNetworking.m in Sources */,
@@ -557,6 +557,7 @@
 				32882D261A73E38000FE63C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32882D271A73E38000FE63C5 /* Build configuration list for PBXNativeTarget "TestAPIv2Tests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +566,7 @@
 				32882D291A73E38000FE63C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

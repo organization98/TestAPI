@@ -1,5 +1,5 @@
 //
-//  NetworkManager.h
+//  RequestManager.h
 //  TestAPI
 //
 //  Created by Dmitriy Demchenko on 01/24/15.
@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "ViewController.h"
-#import "User.h"
+#import "Response.h"
 
 typedef  void (^NetworkBlock)(BOOL succes, id data, NSError* error);
 
-@interface NetworkManager : NSObject
+@interface RequestManager : NSObject
 
-+ (NetworkManager *)sharedManager;
++ (RequestManager *)sharedManager;
 - (void)loadDataFromURL:(NSURL *)url completion:(NetworkBlock) block;
-- (void)saveUser:(User *)user completion:(NetworkBlock) block;
+- (void)reserve:(NSString *)url completion:(NetworkBlock)block;
 
 @end

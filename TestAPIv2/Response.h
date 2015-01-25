@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface Response : NSObject
 
+// Авторизация (auth)
 @property (strong, nonatomic) NSString *result;
 @property (strong, nonatomic) NSString *session;
 
-+ (User *)userFromDictionary:(NSDictionary *)dictionary;
-- (NSDictionary *)dictionaryFromUser;
++ (Response *)userFromDictionary:(NSDictionary *)dictionary;
++ (NSDictionary *)reservePost;
 
 @end

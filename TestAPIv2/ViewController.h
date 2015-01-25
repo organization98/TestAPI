@@ -10,13 +10,13 @@
 
 @interface ViewController : UIViewController
 
-
-
 - (IBAction)authorization:(id)sender;
-
 - (IBAction)getTrains:(id)sender;
-
 - (IBAction)getPrices:(id)sender;
+- (IBAction)getPlaces:(id)sender;
+- (IBAction)reserve:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
-

@@ -1,24 +1,29 @@
 //
-//  NetworkManager.m
+//  RequestManager.m
 //  TestAPI
 //
 //  Created by Dmitriy Demchenko on 01/24/15.
 //  Copyright (c) 2015 Dmitriy Demchenko. All rights reserved.
 //
 
-#import "NetworkManager.h"
+#import "RequestManager.h"
 #import "AFNetworking.h"
 
 
-@implementation NetworkManager
+@implementation RequestManager
 
-+ (NetworkManager *)sharedManager {
-    static NetworkManager *manager = nil;
++ (RequestManager *)sharedManager {
+    static RequestManager *manager = nil;
     static dispatch_once_t onceTaken;
     dispatch_once (& onceTaken, ^{
-        manager = [NetworkManager new];
+        manager = [RequestManager new];
     });
     return manager;
+}
+
+- (void)alertWith:(NSString *)message {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 //Получение списка пользователей
@@ -32,29 +37,27 @@
                                                               error:&error];
          
          if (!jsonData) {
-             NSLog(@"Got an error: %@", error);
+             [self alertWith:[NSString stringWithFormat:@"Got an error: %@", error]];
          } else {
              NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                   options:NSJSONReadingMutableContainers
                                                                     error:&error];
-             NSLog(@"jsonDictionary\n\n%@", jsonDictionary);
              block (YES, jsonDictionary, nil);
          }
      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         NSLog(@"%@", error);
+         [self alertWith:[NSString stringWithFormat:@"%@", error]];
      }];
 }
 
 //Сохранение пользователя
-- (void)saveUser:(User *)user completion:(NetworkBlock)block {
-    AFHTTPRequestOperationManager* manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary* param = [user dictionaryFromUser];
-    [manager POST:@"https://domain/api/transactionname?param=value&param2=value&session=akenbrbbr9b3r7d vo3t33ih0f7" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"USER SAVED\n%@", responseObject); //Обработка сохранения пользователя
-        User *user = [User userFromDictionary:responseObject];
-        block(YES, user, nil);
+- (void)reserve:(NSString *)url completion:(NetworkBlock)block {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *param = [Response reservePost];
+    [manager POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        //Обработка responseObject
+        block(YES, responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        //Обработка ошибки
+        [self alertWith:[NSString stringWithFormat:@"%@", error]];
     }];
 }
 
@@ -63,7 +66,7 @@
 - (NSArray *)usersFromData:(id)data {
     NSMutableArray *users = [NSMutableArray array];
     for (NSDictionary *dict in data){
-        User *user = [User userFromDictionary:dict];
+        Response *user = [Response userFromDictionary:dict];
         [users addObject:user];
     }
     return users;
