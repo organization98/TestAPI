@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ViewController.h"
+#import "MainController.h"
 #import "Response.h"
 
 typedef  void (^NetworkBlock)(BOOL succes, id data, NSError* error);
@@ -15,7 +15,7 @@ typedef  void (^NetworkBlock)(BOOL succes, id data, NSError* error);
 @interface RequestManager : NSObject
 
 + (RequestManager *)sharedManager;
-- (void)loadDataFromURL:(NSURL *)url completion:(NetworkBlock) block;
-- (void)reserve:(NSString *)url completion:(NetworkBlock)block;
+- (void)authorizationFromURL:(NSURL *)url completion:(NetworkBlock) block;
+- (void)reserveFromURL:(NSString *)url completion:(NetworkBlock)block;
 
 @end

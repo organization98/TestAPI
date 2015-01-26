@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MainController : UIViewController
 
 - (IBAction)authorization:(id)sender;
 - (IBAction)getTrains:(id)sender;
 - (IBAction)getPrices:(id)sender;
 - (IBAction)getPlaces:(id)sender;
 - (IBAction)reserve:(id)sender;
+
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allButtonsStyle;
+
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *label;

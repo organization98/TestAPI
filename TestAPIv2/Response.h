@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSString *result;
 @property (strong, nonatomic) NSString *session;
 
-+ (Response *)userFromDictionary:(NSDictionary *)dictionary;
++ (Response *)responseFromDictionary:(NSDictionary *)dictionary;
 + (NSDictionary *)reservePost;
 
 @end

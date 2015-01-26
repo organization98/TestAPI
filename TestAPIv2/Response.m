@@ -10,33 +10,32 @@
 
 @implementation Response
 
-+ (Response *)userFromDictionary:(NSDictionary *)dictionary {
-    Response *user = [[Response alloc] init];
-    user.result = [dictionary objectForKey:@"result"];
-    user.session = [dictionary objectForKey:@"session"];
-    return user;
++ (Response *)responseFromDictionary:(NSDictionary *)dictionary {
+    Response *response = [[Response alloc] init];
+    response.result = [dictionary objectForKey:@"result"];
+    response.session = [dictionary objectForKey:@"session"];
+    return response;
 }
 
 + (NSDictionary *)reservePost {
+    
     NSDictionary *lugagge = [NSDictionary dictionaryWithObjectsAndKeys:
-                                @"A",               @"kind",
-                                @"45",              @"weight",
+                                @"A",       @"kind",
+                                @"45",      @"weight",
                                 nil];
     
     NSDictionary *paramsDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                @"booking",         @"buy",
-                                @"full",            @"type",
-                                @"Taras",           @"firstname",
-                                @"Bulba",           @"lastname",
-                                @"1",               @"transportation",
-                                lugagge,            @"lugagge",
+                                @"booking", @"buy",
+                                @"full",    @"type",
+                                @"Taras",   @"firstname",
+                                @"Bulba",   @"lastname",
+                                @"1",       @"transportation",
+                                lugagge,    @"lugagge",
                                 nil];
     
     NSDictionary *places = [NSDictionary dictionaryWithObjectsAndKeys:
-                                paramsDict,         @"011",
+                                paramsDict, @"025",
                                 nil];
-
-    NSLog(@"%@", places);
     
     return places;
 }

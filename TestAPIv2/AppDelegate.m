@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+// Base colors
+#define GlobalOceanGreenColor [UIColor colorWithRed:0.31f green:0.69f blue:0.48f alpha:1.0f]
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // инфо: http://www.appcoda.com/customize-navigation-status-bar-ios-7/
+    
+    // изменение цвета NavigationBar и цвета шрифта кнопок
+    [[UINavigationBar appearance] setBarTintColor:GlobalOceanGreenColor];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // изменение цвета Toolbar и цвета шрифта кнопок
+    [[UIToolbar appearance] setBarTintColor:GlobalOceanGreenColor];
+    [[UIToolbar appearance] setTintColor:[UIColor whiteColor]];
+    [[UIToolbar appearance] setTranslucent:NO];
+    
+    // изменение стиля StatusBar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
