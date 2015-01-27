@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MainController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *statonFrom;
-
 @property (weak, nonatomic) IBOutlet UITextField *stationTo;
 
-
 @end
-

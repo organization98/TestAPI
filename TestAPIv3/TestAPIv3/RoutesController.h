@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RoutesController : UITableViewController
+@interface RoutesController : UIViewController
 
 @property(strong, nonatomic) NSString *stationFrom;
 @property(strong, nonatomic) NSString *stationTo;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

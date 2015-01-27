@@ -7,17 +7,59 @@
 //
 
 #import "RoutesController.h"
+#import "SessionManager.h"
+#import "DejalActivityView.h"
 
-@interface RoutesController ()
+@interface RoutesController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation RoutesController
+@implementation RoutesController {
+    NSArray *routesArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Station from: %@, Station To: %@", self.stationFrom, self.stationTo);
     
+    //--------------------------------------------------------------------------------------------
+    
+    [self.tableView setHidden:YES];
+    UIView *viewToUse = self.view;
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [DejalActivityView activityViewForView:viewToUse];
+    
+    //--------------------------------------------------------------------------------------------
+    
+    [[SessionManager sharedManager] open:^(BOOL succes, id data, NSError *error) {
+        if (succes == NO) {
+            return;
+        }
+        [self removeActivityView];
+    }];
+    
+    
+}
+
+/*
+  Показать таблицу, убрать загрузчик. Выполняет транзакцию получения рейсов
+ */
+-(void)removeActivityView{
+
+    [[SessionManager sharedManager] getRoutes:self.stationFrom to:self.stationTo and:^(BOOL succes, id data, NSError *error) {
+        if (!data)
+            return;
+        
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data
+                                                           options:NSJSONWritingPrettyPrinted
+                                                             error:&error];
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                   options:NSJSONReadingMutableContainers
+                                                                     error:&error];
+        routesArray = [dictionary objectForKey:@"items"];
+        [self.tableView reloadData];
+        [DejalActivityView removeView];
+        [self.tableView setHidden:NO];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,72 +67,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
+// количество секций в таблице
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1; // выведено кол-во family
 }
 
+// сколько рядов в секции под индексом section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [routesArray count];
 }
 
+// имя section
 /*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    // Configure the cell...
+    NSArray *familyNamesArray = [UIFont familyNames];
+    
+    NSString *familyNameString = [familyNamesArray objectAtIndex:section];
+    
+    return familyNameString;
+}
+*/
+
+
+// возврат ячейки по indexPath и будет содержать: Section и Row
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // переиспользование ячеек
+    static NSString *indentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:indentifier];
+        NSLog(@"cell created");
+    }
+    NSDictionary *route = [routesArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [route objectForKey:@"number"];
+    cell.detailTextLabel.text = [route objectForKey:@"fasted"];
     
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

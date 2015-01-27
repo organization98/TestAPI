@@ -24,9 +24,11 @@
 		322485341A767D1600284BB0 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224852A1A767D1600284BB0 /* UIProgressView+AFNetworking.m */; };
 		322485351A767D1600284BB0 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224852C1A767D1600284BB0 /* UIRefreshControl+AFNetworking.m */; };
 		322485361A767D1600284BB0 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224852E1A767D1600284BB0 /* UIWebView+AFNetworking.m */; };
+		323B819D1A77D1E600DD1D1A /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323B819C1A77D1E600DD1D1A /* DejalActivityView.m */; };
+		323B819F1A77D21300DD1D1A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323B819E1A77D21300DD1D1A /* CoreGraphics.framework */; };
 		32A069411A7668E100015743 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069401A7668E100015743 /* main.m */; };
 		32A069441A7668E100015743 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069431A7668E100015743 /* AppDelegate.m */; };
-		32A069471A7668E100015743 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069461A7668E100015743 /* ViewController.m */; };
+		32A069471A7668E100015743 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069461A7668E100015743 /* MainController.m */; };
 		32A0694A1A7668E100015743 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A069481A7668E100015743 /* Main.storyboard */; };
 		32A0694C1A7668E100015743 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A0694B1A7668E100015743 /* Images.xcassets */; };
 		32A0694F1A7668E100015743 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A0694D1A7668E100015743 /* LaunchScreen.xib */; };
@@ -82,13 +84,16 @@
 		3224852C1A767D1600284BB0 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		3224852D1A767D1600284BB0 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		3224852E1A767D1600284BB0 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		323B819B1A77D1E600DD1D1A /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		323B819C1A77D1E600DD1D1A /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
+		323B819E1A77D21300DD1D1A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32A0693B1A7668E100015743 /* TestAPIv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPIv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A0693F1A7668E100015743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32A069401A7668E100015743 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32A069421A7668E100015743 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32A069431A7668E100015743 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		32A069451A7668E100015743 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		32A069461A7668E100015743 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		32A069451A7668E100015743 /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		32A069461A7668E100015743 /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		32A069491A7668E100015743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32A0694B1A7668E100015743 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		32A0694E1A7668E100015743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323B819F1A77D21300DD1D1A /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,11 +180,23 @@
 		322485371A767D1B00284BB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				323B819E1A77D21300DD1D1A /* CoreGraphics.framework */,
+				323B819A1A77D1E600DD1D1A /* DejalActivityView */,
 				3224851D1A767D1600284BB0 /* UIKit+AFNetworking */,
 				322485001A767D0800284BB0 /* AFNetworking */,
 			);
 			name = Frameworks;
 			path = TestAPIv3;
+			sourceTree = "<group>";
+		};
+		323B819A1A77D1E600DD1D1A /* DejalActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				323B819B1A77D1E600DD1D1A /* DejalActivityView.h */,
+				323B819C1A77D1E600DD1D1A /* DejalActivityView.m */,
+			);
+			name = DejalActivityView;
+			path = Frameworks/DejalActivityView;
 			sourceTree = "<group>";
 		};
 		32A069321A7668E100015743 = {
@@ -206,14 +224,14 @@
 				32A069671A76700C00015743 /* Utils */,
 				32A069421A7668E100015743 /* AppDelegate.h */,
 				32A069431A7668E100015743 /* AppDelegate.m */,
-				32A069451A7668E100015743 /* ViewController.h */,
-				32A069461A7668E100015743 /* ViewController.m */,
+				32A069451A7668E100015743 /* MainController.h */,
+				32A069461A7668E100015743 /* MainController.m */,
+				32A069641A766C7400015743 /* RoutesController.h */,
+				32A069651A766C7400015743 /* RoutesController.m */,
 				32A069481A7668E100015743 /* Main.storyboard */,
 				32A0694B1A7668E100015743 /* Images.xcassets */,
 				32A0694D1A7668E100015743 /* LaunchScreen.xib */,
 				32A0693E1A7668E100015743 /* Supporting Files */,
-				32A069641A766C7400015743 /* RoutesController.h */,
-				32A069651A766C7400015743 /* RoutesController.m */,
 			);
 			path = TestAPIv3;
 			sourceTree = "<group>";
@@ -362,8 +380,9 @@
 				3224851A1A767D0800284BB0 /* AFURLRequestSerialization.m in Sources */,
 				32A0696A1A7670AB00015743 /* SessionManager.m in Sources */,
 				322485351A767D1600284BB0 /* UIRefreshControl+AFNetworking.m in Sources */,
+				323B819D1A77D1E600DD1D1A /* DejalActivityView.m in Sources */,
 				3224851B1A767D0800284BB0 /* AFURLResponseSerialization.m in Sources */,
-				32A069471A7668E100015743 /* ViewController.m in Sources */,
+				32A069471A7668E100015743 /* MainController.m in Sources */,
 				322485331A767D1600284BB0 /* UIImageView+AFNetworking.m in Sources */,
 				32A069441A7668E100015743 /* AppDelegate.m in Sources */,
 				322485311A767D1600284BB0 /* UIAlertView+AFNetworking.m in Sources */,
