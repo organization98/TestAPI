@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Routes.h"
 
 @interface RoutesController : UIViewController
 
-@property(strong, nonatomic) NSString *stationFrom;
-@property(strong, nonatomic) NSString *stationTo;
+@property (strong, nonatomic) NSString *stationFrom;
+@property (strong, nonatomic) NSString *stationTo;
+@property (strong, nonatomic) NSDate *startDate;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

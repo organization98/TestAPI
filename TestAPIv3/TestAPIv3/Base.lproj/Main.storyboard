@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="o7F-Xu-Xcf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o7F-Xu-Xcf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MainController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="USp-lM-i5u"/>
+                        <viewControllerLayoutGuide type="bottom" id="uA0-Ol-1Uj"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2210700" borderStyle="roundedRect" minimumFontSize="17" id="eqQ-nK-zQv">
-                                <rect key="frame" x="16" y="20" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2200001" borderStyle="roundedRect" minimumFontSize="17" id="ItS-3w-VXO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2200001" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ItS-3w-VXO">
                                 <rect key="frame" x="16" y="68" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ykI-64-6ra">
-                                <rect key="frame" x="137" y="106" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2210700" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqQ-nK-zQv">
+                                <rect key="frame" x="16" y="20" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykI-64-6ra">
+                                <rect key="frame" x="16" y="108" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.42352941176470588" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Find">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -36,6 +41,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ykI-64-6ra" firstAttribute="top" secondItem="ItS-3w-VXO" secondAttribute="bottom" constant="10" id="0VK-Os-HRr"/>
+                            <constraint firstItem="eqQ-nK-zQv" firstAttribute="top" secondItem="USp-lM-i5u" secondAttribute="bottom" constant="20" id="77i-ht-edt"/>
+                            <constraint firstItem="ItS-3w-VXO" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="HSU-er-bLb"/>
+                            <constraint firstItem="eqQ-nK-zQv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ScN-MW-eep"/>
+                            <constraint firstItem="ItS-3w-VXO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cxv-VK-xBg"/>
+                            <constraint firstItem="ykI-64-6ra" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="fcj-ee-3Hr"/>
+                            <constraint firstItem="eqQ-nK-zQv" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qhR-FE-IOV"/>
+                            <constraint firstItem="ykI-64-6ra" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sW5-rj-PeL"/>
+                            <constraint firstItem="ItS-3w-VXO" firstAttribute="top" secondItem="eqQ-nK-zQv" secondAttribute="bottom" constant="18" id="woW-63-TIa"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="kTi-HV-6XY"/>
@@ -52,23 +68,17 @@
         <scene sceneID="b2Z-8N-3z5">
             <objects>
                 <viewController id="r2M-st-Huu" customClass="RoutesController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mKH-wv-4m2"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Hu-LW-28G"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="awW-6s-brb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZOr-s6-zF5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZOr-s6-zF5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="DUg-gp-Wng">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DUg-gp-Wng" id="vCG-Yl-Sr5">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="r2M-st-Huu" id="b6i-lf-2Xn"/>
                                     <outlet property="delegate" destination="r2M-st-Huu" id="iBz-rI-2Mq"/>
@@ -76,6 +86,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZOr-s6-zF5" firstAttribute="top" secondItem="mKH-wv-4m2" secondAttribute="bottom" id="9tY-r5-E4F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZOr-s6-zF5" secondAttribute="trailing" constant="-16" id="MW8-9N-WTY"/>
+                            <constraint firstItem="9Hu-LW-28G" firstAttribute="top" secondItem="ZOr-s6-zF5" secondAttribute="bottom" id="jnW-gT-Qmv"/>
+                            <constraint firstItem="ZOr-s6-zF5" firstAttribute="leading" secondItem="awW-6s-brb" secondAttribute="leadingMargin" constant="-16" id="sy7-1d-ZfB"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="NOZ-os-rUH"/>
@@ -92,7 +108,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o7F-Xu-Xcf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uSf-sr-ewk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="uSf-sr-ewk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

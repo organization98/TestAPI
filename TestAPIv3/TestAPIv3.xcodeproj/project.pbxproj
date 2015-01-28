@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32237EF41A78962100253768 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32237EF31A78962100253768 /* Routes.m */; };
 		322485141A767D0800284BB0 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 322485021A767D0800284BB0 /* AFHTTPRequestOperation.m */; };
 		322485151A767D0800284BB0 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 322485041A767D0800284BB0 /* AFHTTPRequestOperationManager.m */; };
 		322485161A767D0800284BB0 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 322485061A767D0800284BB0 /* AFHTTPSessionManager.m */; };
@@ -26,6 +27,14 @@
 		322485361A767D1600284BB0 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224852E1A767D1600284BB0 /* UIWebView+AFNetworking.m */; };
 		323B819D1A77D1E600DD1D1A /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323B819C1A77D1E600DD1D1A /* DejalActivityView.m */; };
 		323B819F1A77D21300DD1D1A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323B819E1A77D21300DD1D1A /* CoreGraphics.framework */; };
+		3254EEED1A790F420010EA2A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEA1A790F420010EA2A /* logo.png */; };
+		3254EEEE1A790F420010EA2A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEB1A790F420010EA2A /* logo@2x.png */; };
+		3254EEEF1A790F420010EA2A /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEC1A790F420010EA2A /* logo@3x.png */; };
+		3270CD491A78DEEB004C27CE /* RoutesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3270CD471A78DEEB004C27CE /* RoutesCustomCell.m */; };
+		3270CD4A1A78DEEB004C27CE /* RoutesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD481A78DEEB004C27CE /* RoutesCustomCell.xib */; };
+		3270CD4F1A78FE21004C27CE /* pin-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD4C1A78FE21004C27CE /* pin-orange.png */; };
+		3270CD501A78FE21004C27CE /* pin-orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD4D1A78FE21004C27CE /* pin-orange@2x.png */; };
+		3270CD511A78FE21004C27CE /* pin-orange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD4E1A78FE21004C27CE /* pin-orange@3x.png */; };
 		32A069411A7668E100015743 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069401A7668E100015743 /* main.m */; };
 		32A069441A7668E100015743 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069431A7668E100015743 /* AppDelegate.m */; };
 		32A069471A7668E100015743 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069461A7668E100015743 /* MainController.m */; };
@@ -48,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32237EF21A78962100253768 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Routes.h; sourceTree = "<group>"; };
+		32237EF31A78962100253768 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Routes.m; sourceTree = "<group>"; };
 		322485011A767D0800284BB0 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		322485021A767D0800284BB0 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		322485031A767D0800284BB0 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -87,6 +98,15 @@
 		323B819B1A77D1E600DD1D1A /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		323B819C1A77D1E600DD1D1A /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		323B819E1A77D21300DD1D1A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3254EEEA1A790F420010EA2A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/Splash/logo.png; sourceTree = "<group>"; };
+		3254EEEB1A790F420010EA2A /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "Resources/Splash/logo@2x.png"; sourceTree = "<group>"; };
+		3254EEEC1A790F420010EA2A /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@3x.png"; path = "Resources/Splash/logo@3x.png"; sourceTree = "<group>"; };
+		3270CD461A78DEEB004C27CE /* RoutesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesCustomCell.h; sourceTree = "<group>"; };
+		3270CD471A78DEEB004C27CE /* RoutesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesCustomCell.m; sourceTree = "<group>"; };
+		3270CD481A78DEEB004C27CE /* RoutesCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesCustomCell.xib; sourceTree = "<group>"; };
+		3270CD4C1A78FE21004C27CE /* pin-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin-orange.png"; path = "Resources/General/pin-orange.png"; sourceTree = "<group>"; };
+		3270CD4D1A78FE21004C27CE /* pin-orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin-orange@2x.png"; path = "Resources/General/pin-orange@2x.png"; sourceTree = "<group>"; };
+		3270CD4E1A78FE21004C27CE /* pin-orange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin-orange@3x.png"; path = "Resources/General/pin-orange@3x.png"; sourceTree = "<group>"; };
 		32A0693B1A7668E100015743 /* TestAPIv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPIv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A0693F1A7668E100015743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32A069401A7668E100015743 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +145,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32237EEF1A7895D300253768 /* RoutesController */ = {
+			isa = PBXGroup;
+			children = (
+				32237EF21A78962100253768 /* Routes.h */,
+				32237EF31A78962100253768 /* Routes.m */,
+				32A069641A766C7400015743 /* RoutesController.h */,
+				32A069651A766C7400015743 /* RoutesController.m */,
+				3270CD461A78DEEB004C27CE /* RoutesCustomCell.h */,
+				3270CD471A78DEEB004C27CE /* RoutesCustomCell.m */,
+				3270CD481A78DEEB004C27CE /* RoutesCustomCell.xib */,
+			);
+			name = RoutesController;
+			sourceTree = "<group>";
+		};
+		32237EF01A7895EA00253768 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				32A069451A7668E100015743 /* MainController.h */,
+				32A069461A7668E100015743 /* MainController.m */,
+			);
+			name = MainController;
+			sourceTree = "<group>";
+		};
+		32237EF11A7895F900253768 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				32A069421A7668E100015743 /* AppDelegate.h */,
+				32A069431A7668E100015743 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		322485001A767D0800284BB0 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +251,19 @@
 			path = Frameworks/DejalActivityView;
 			sourceTree = "<group>";
 		};
+		3270CD4B1A78FD75004C27CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3254EEEA1A790F420010EA2A /* logo.png */,
+				3254EEEB1A790F420010EA2A /* logo@2x.png */,
+				3254EEEC1A790F420010EA2A /* logo@3x.png */,
+				3270CD4C1A78FE21004C27CE /* pin-orange.png */,
+				3270CD4D1A78FE21004C27CE /* pin-orange@2x.png */,
+				3270CD4E1A78FE21004C27CE /* pin-orange@3x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		32A069321A7668E100015743 = {
 			isa = PBXGroup;
 			children = (
@@ -222,13 +287,11 @@
 			isa = PBXGroup;
 			children = (
 				32A069671A76700C00015743 /* Utils */,
-				32A069421A7668E100015743 /* AppDelegate.h */,
-				32A069431A7668E100015743 /* AppDelegate.m */,
-				32A069451A7668E100015743 /* MainController.h */,
-				32A069461A7668E100015743 /* MainController.m */,
-				32A069641A766C7400015743 /* RoutesController.h */,
-				32A069651A766C7400015743 /* RoutesController.m */,
+				32237EF11A7895F900253768 /* AppDelegate */,
+				32237EF01A7895EA00253768 /* MainController */,
+				32237EEF1A7895D300253768 /* RoutesController */,
 				32A069481A7668E100015743 /* Main.storyboard */,
+				3270CD4B1A78FD75004C27CE /* Resources */,
 				32A0694B1A7668E100015743 /* Images.xcassets */,
 				32A0694D1A7668E100015743 /* LaunchScreen.xib */,
 				32A0693E1A7668E100015743 /* Supporting Files */,
@@ -353,7 +416,14 @@
 			files = (
 				32A0694A1A7668E100015743 /* Main.storyboard in Resources */,
 				32A0694F1A7668E100015743 /* LaunchScreen.xib in Resources */,
+				3270CD4A1A78DEEB004C27CE /* RoutesCustomCell.xib in Resources */,
 				32A0694C1A7668E100015743 /* Images.xcassets in Resources */,
+				3254EEED1A790F420010EA2A /* logo.png in Resources */,
+				3270CD511A78FE21004C27CE /* pin-orange@3x.png in Resources */,
+				3270CD501A78FE21004C27CE /* pin-orange@2x.png in Resources */,
+				3254EEEE1A790F420010EA2A /* logo@2x.png in Resources */,
+				3254EEEF1A790F420010EA2A /* logo@3x.png in Resources */,
+				3270CD4F1A78FE21004C27CE /* pin-orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +447,7 @@
 				322485171A767D0800284BB0 /* AFNetworkReachabilityManager.m in Sources */,
 				322485341A767D1600284BB0 /* UIProgressView+AFNetworking.m in Sources */,
 				3224851C1A767D0800284BB0 /* AFURLSessionManager.m in Sources */,
+				3270CD491A78DEEB004C27CE /* RoutesCustomCell.m in Sources */,
 				3224851A1A767D0800284BB0 /* AFURLRequestSerialization.m in Sources */,
 				32A0696A1A7670AB00015743 /* SessionManager.m in Sources */,
 				322485351A767D1600284BB0 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -392,6 +463,7 @@
 				32A069411A7668E100015743 /* main.m in Sources */,
 				32A069661A766C7400015743 /* RoutesController.m in Sources */,
 				322485161A767D0800284BB0 /* AFHTTPSessionManager.m in Sources */,
+				32237EF41A78962100253768 /* Routes.m in Sources */,
 				322485301A767D1600284BB0 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3224852F1A767D1600284BB0 /* AFNetworkActivityIndicatorManager.m in Sources */,
 			);

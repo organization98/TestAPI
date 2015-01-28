@@ -90,7 +90,6 @@
             NSLog(@"%@", [[error userInfo] objectForKey:@"message"]);
         } else {
             block (succes, data, error);
-            //NSLog(@"\ntrains\nclass: %@", [[[data objectForKey:@"items"] firstObject] objectForKey:@"class"]);
         }
     }];
 }

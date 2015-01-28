@@ -18,7 +18,10 @@
 @implementation MainController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    self.navigationItem.title = NSStringFromClass([MainController class]);
 }
 
 
