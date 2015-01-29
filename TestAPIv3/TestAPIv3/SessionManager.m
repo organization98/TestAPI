@@ -19,6 +19,8 @@
     NSString *password;
     NSString *session;
     NSString *domain;
+    
+    NSDictionary *dict;
 }
 
 + (SessionManager *)sharedManager {
@@ -63,13 +65,14 @@
         return;
     }
     // Выполнить транзакцию авторизации, сохраниить сессию
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@", domain, username, password]];
-    [self requestFromURL:url completion:^(BOOL succes, id data, NSError *error) {
+    NSURL *urlOffLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@&mode=offline", domain, username, password]];
+    NSURL *urlOnLine = [NSURL URLWithString:[NSString stringWithFormat:@"%@/auth?username=%@&password=%@", domain, username, password]];
+    [self requestFromURL:urlOnLine completion:^(BOOL succes, id data, NSError *error) {
         if ([[data objectForKey:@"result"] isEqual:@"OK"]) {
             session = [data objectForKey:@"session"];
             block (succes, data, error);
         }
-        NSLog(@"\nавторизация\nresult: %@\nsession: %@", [data objectForKey:@"result"], session);
+        NSLog(@"\nавторизация\nresult: %@\nsession: %@\n\n", [data objectForKey:@"result"], session);
     }];
     return;
 }
@@ -86,8 +89,29 @@
     }];
 }
 
+- (NSDictionary *)getRoutesWithDictionary:(NSString *)stationFrom to:(NSString *)stationTo forStartDate:(NSString *)date and:(NetworkBlock)block {
+    // выполнение транзакции "trains"
+    NSURL *requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/trains?from=%@&to=%@&startDate=%@&session=%@", domain, stationFrom, stationTo, date, session]];
+    [self requestFromURL:requestURL completion:^(BOOL succes, id data, NSError *error) {
+        if (succes == NO) {
+            NSLog(@"%@", [[error userInfo] objectForKey:@"message"]);
+        } else {
+            block (succes, data, error);
+            if (!data)
+                return;
+            dict = [self dictionaryFromJSON:data with:error];
+        }
+    }];
+    return dict;
+}
+
+- (NSDictionary *)dictionaryFromJSON:(NSData *)data with:(NSError *)error {
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
+    return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+}
+
 - (void)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls and:(NetworkBlock)block {
-    NSString *requestURL = [NSString stringWithFormat:@"%@/prices?train=%@&session=%@", domain, @"079П", session];
+    NSString *requestURL = [NSString stringWithFormat:@"%@/prices?train=%@&session=%@", domain, train, session];
     NSURL *url = [NSURL URLWithString:[requestURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [self requestFromURL:url completion:^(BOOL succes, id data, NSError *error) {
         if (succes == NO) {

@@ -9,6 +9,7 @@
 #import "RoutesController.h"
 #import "RoutesCustomCell.h"
 #import "SessionManager.h"
+#import "PricesManager.h"
 #import "DejalActivityView.h"
 
 @interface RoutesController () <UITableViewDataSource, UITableViewDelegate>
@@ -18,6 +19,7 @@
 @implementation RoutesController {
     NSArray *routesArray;
     NSDictionary *route;
+    PricesManager *pricesManager;
 }
 
 - (void)viewDidLoad {
@@ -25,6 +27,8 @@
     [super viewDidLoad];
     
     self.navigationItem.title = NSStringFromClass([RoutesController class]);
+    
+    pricesManager = [[PricesManager alloc] init];
     
     // ActivityView
     [self.tableView setHidden:YES];
@@ -40,12 +44,22 @@
     }];
 }
 
+- (void)removeActivityView2 {
+    NSDictionary *dict = [[SessionManager sharedManager] getRoutesWithDictionary:self.stationFrom to:self.stationTo forStartDate:self.startDate and:^(BOOL succes, id data, NSError *error) {
+        
+    }];
+    routesArray = [dict objectForKey:@"items"];
+    [self.tableView reloadData];
+    [DejalActivityView removeView];
+    [self.tableView setHidden:NO];
+    [self loadPrices];
+}
+
 // Показать таблицу, убрать загрузчик. Выполняет транзакцию получения рейсов
 - (void)removeActivityView {
     [[SessionManager sharedManager] getRoutes:self.stationFrom to:self.stationTo forStartDate:self.startDate and:^(BOOL succes, id data, NSError *error) {
         if (!data)
             return;
-        // Routes *routes = [Routes routeFromDictionary:[self dictionaryFromJSON:data with:error]];
         routesArray = [[self dictionaryFromJSON:data with:error] objectForKey:@"items"];
         [self.tableView reloadData];
         [DejalActivityView removeView];
@@ -55,11 +69,13 @@
 }
 
 - (void)loadPrices {
-    [[SessionManager sharedManager] getPrices:nil withType:nil andClass:nil and:^(BOOL succes, id data, NSError *error) {
+    
+    NSString *train = @"079П";
+    
+    [[SessionManager sharedManager] getPrices:train withType:nil andClass:nil and:^(BOOL succes, id data, NSError *error) {
         if (!data) {
             return;
         }
-        NSLog(@"getPrices: %@", [self dictionaryFromJSON:data with:error]);
     }];
 }
 
@@ -94,9 +110,6 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
     route = [routesArray objectAtIndex:indexPath.row];
-    
-    NSLog(@"%@", [routesArray firstObject]);
-    
     return cell;
 }
 
@@ -104,21 +117,35 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RoutesCustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    cell.number.text = [route objectForKey:@"number"];
+    cell.labelNumber.text = [route objectForKey:@"number"];
     cell.model.text = [NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]];
     
     // Блок время
     // EEE d MMM HH:MM"
-//    NSLog(@"getDateFromString %@", [self getDateFromString:[route objectForKey:@"travel_time"]]);
     
-    cell.departureDate.text = [route objectForKey:@"departure_date"];
-    cell.arrivalDate.text = [route objectForKey:@"arrival_date"];
-    cell.travelTime.text = [route objectForKey:@"travel_time"];
+    cell.labelDepartureDate.text = [route objectForKey:@"departure_date"];
+    cell.labelArrivalDate.text = [route objectForKey:@"arrival_date"];
+    cell.labelTravelTime.text = [route objectForKey:@"travel_time"];
     
-    cell.wagonType.text = [route objectForKey:@"wagon_type"];
-    cell.countPlaces.text = [route objectForKey:@"count"];
+    cell.labelWagonType.text = [route objectForKey:@"wagon_type"];
+    cell.labelCountPlaces.text = [route objectForKey:@"count"];
     
     cell.clockImage.image = [UIImage imageNamed:@"pin-orange"];
+    
+    
+    cell.trainNumber = [route objectForKey:@"number"];
+    cell.wagonType = [route objectForKey:@"wagon_type"];
+
+    cell.labelCost.text = nil;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:cell selector:@selector(updatePrice:) name:cell.labelNumber.text object:pricesManager];
+    
+    if([pricesManager getPrice:cell.trainNumber from:cell]){
+        NSDictionary *prices = [pricesManager getPrice:cell.trainNumber from:cell];
+        [cell addPriceToLabel:prices];
+    }
+    
+
 }
 
 @end

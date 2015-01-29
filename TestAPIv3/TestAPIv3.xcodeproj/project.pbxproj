@@ -25,6 +25,7 @@
 		322485341A767D1600284BB0 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224852A1A767D1600284BB0 /* UIProgressView+AFNetworking.m */; };
 		322485351A767D1600284BB0 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224852C1A767D1600284BB0 /* UIRefreshControl+AFNetworking.m */; };
 		322485361A767D1600284BB0 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3224852E1A767D1600284BB0 /* UIWebView+AFNetworking.m */; };
+		3234A0191A7A40490001EEB8 /* PricesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3234A0181A7A40490001EEB8 /* PricesManager.m */; };
 		323B819D1A77D1E600DD1D1A /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323B819C1A77D1E600DD1D1A /* DejalActivityView.m */; };
 		323B819F1A77D21300DD1D1A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323B819E1A77D21300DD1D1A /* CoreGraphics.framework */; };
 		3254EEED1A790F420010EA2A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEA1A790F420010EA2A /* logo.png */; };
@@ -95,6 +96,8 @@
 		3224852C1A767D1600284BB0 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		3224852D1A767D1600284BB0 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		3224852E1A767D1600284BB0 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		3234A0171A7A40490001EEB8 /* PricesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricesManager.h; sourceTree = "<group>"; };
+		3234A0181A7A40490001EEB8 /* PricesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricesManager.m; sourceTree = "<group>"; };
 		323B819B1A77D1E600DD1D1A /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		323B819C1A77D1E600DD1D1A /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		323B819E1A77D21300DD1D1A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -330,6 +333,8 @@
 			children = (
 				32A069681A7670AB00015743 /* SessionManager.h */,
 				32A069691A7670AB00015743 /* SessionManager.m */,
+				3234A0171A7A40490001EEB8 /* PricesManager.h */,
+				3234A0181A7A40490001EEB8 /* PricesManager.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				322485321A767D1600284BB0 /* UIButton+AFNetworking.m in Sources */,
 				322485171A767D0800284BB0 /* AFNetworkReachabilityManager.m in Sources */,
 				322485341A767D1600284BB0 /* UIProgressView+AFNetworking.m in Sources */,
+				3234A0191A7A40490001EEB8 /* PricesManager.m in Sources */,
 				3224851C1A767D0800284BB0 /* AFURLSessionManager.m in Sources */,
 				3270CD491A78DEEB004C27CE /* RoutesCustomCell.m in Sources */,
 				3224851A1A767D0800284BB0 /* AFURLRequestSerialization.m in Sources */,

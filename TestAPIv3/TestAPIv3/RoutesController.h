@@ -16,5 +16,4 @@
 @property (strong, nonatomic) NSString *startDate;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
