@@ -58,7 +58,7 @@
 }
 
 - (void)open:(NetworkBlock)block {
-    if(session.length >  0){
+    if (session.length >  0){
         block (YES, nil, nil);
         return;
     }
@@ -74,17 +74,9 @@
     return;
 }
 
-- (void)getRoutes:(NSString *)stationFrom to:(NSString *)stationTo and:(NetworkBlock)block {
-    
-    // добавить в параметры дату
-    
+- (void)getRoutes:(NSString *)stationFrom to:(NSString *)stationTo forStartDate:(NSString *)date and:(NetworkBlock)block {
     // выполнение транзакции "trains"
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.timeZone = [NSTimeZone localTimeZone];
-    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
-    NSDate *tomorrow = [[NSDate date] dateByAddingTimeInterval:60 * 60 * 24 * 1];
-    NSString *startDate = [dateFormatter stringFromDate:tomorrow];
-    NSURL *requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/trains?from=%@&to=%@&startDate=%@&session=%@", domain, stationFrom, stationTo, startDate, session]];
+    NSURL *requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/trains?from=%@&to=%@&startDate=%@&session=%@", domain, stationFrom, stationTo, date, session]];
     [self requestFromURL:requestURL completion:^(BOOL succes, id data, NSError *error) {
         if (succes == NO) {
             NSLog(@"%@", [[error userInfo] objectForKey:@"message"]);
@@ -94,8 +86,16 @@
     }];
 }
 
-- (NSArray *)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls {
-    return [NSArray new];
+- (void)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls and:(NetworkBlock)block {
+    NSString *requestURL = [NSString stringWithFormat:@"%@/prices?train=%@&session=%@", domain, @"079П", session];
+    NSURL *url = [NSURL URLWithString:[requestURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    [self requestFromURL:url completion:^(BOOL succes, id data, NSError *error) {
+        if (succes == NO) {
+            NSLog(@"%@", [[error userInfo] objectForKey:@"message"]);
+        } else {
+            block (succes, data, error);
+        }
+    }];
 }
 
 - (NSDictionary *)getPlaces:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls {

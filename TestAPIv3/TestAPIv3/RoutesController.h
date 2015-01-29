@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) NSString *stationFrom;
 @property (strong, nonatomic) NSString *stationTo;
-@property (strong, nonatomic) NSDate *startDate;
+@property (strong, nonatomic) NSString *startDate;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

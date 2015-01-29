@@ -27,9 +27,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykI-64-6ra">
-                                <rect key="frame" x="16" y="108" width="288" height="30"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-Ug-v4Z">
+                                <rect key="frame" x="0.0" y="108" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="444201826.85781401">
+                                    <!--2015-01-29 05:23:46 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykI-64-6ra">
+                                <rect key="frame" x="16" y="278" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.42352941176470588" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="oGK-zT-PZd"/>
+                                    <constraint firstAttribute="height" constant="30" id="xZl-ga-KSA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Find">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -42,20 +52,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ykI-64-6ra" firstAttribute="top" secondItem="ItS-3w-VXO" secondAttribute="bottom" constant="10" id="0VK-Os-HRr"/>
                             <constraint firstItem="eqQ-nK-zQv" firstAttribute="top" secondItem="USp-lM-i5u" secondAttribute="bottom" constant="20" id="77i-ht-edt"/>
+                            <constraint firstItem="ovf-Ug-v4Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ClW-bE-rc7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ovf-Ug-v4Z" secondAttribute="trailing" constant="-16" id="Dar-xF-o5V"/>
                             <constraint firstItem="ItS-3w-VXO" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="HSU-er-bLb"/>
+                            <constraint firstItem="ovf-Ug-v4Z" firstAttribute="top" secondItem="ItS-3w-VXO" secondAttribute="bottom" constant="10" id="KQw-ct-FtW"/>
+                            <constraint firstItem="ykI-64-6ra" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Pl7-5N-63F"/>
                             <constraint firstItem="eqQ-nK-zQv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ScN-MW-eep"/>
+                            <constraint firstItem="ykI-64-6ra" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="WxQ-WD-P1Y"/>
                             <constraint firstItem="ItS-3w-VXO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cxv-VK-xBg"/>
-                            <constraint firstItem="ykI-64-6ra" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="fcj-ee-3Hr"/>
+                            <constraint firstItem="ykI-64-6ra" firstAttribute="top" secondItem="ovf-Ug-v4Z" secondAttribute="bottom" constant="8" id="iZf-9i-KoT"/>
                             <constraint firstItem="eqQ-nK-zQv" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="qhR-FE-IOV"/>
-                            <constraint firstItem="ykI-64-6ra" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="sW5-rj-PeL"/>
                             <constraint firstItem="ItS-3w-VXO" firstAttribute="top" secondItem="eqQ-nK-zQv" secondAttribute="bottom" constant="18" id="woW-63-TIa"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="kTi-HV-6XY"/>
                     <connections>
+                        <outlet property="datePicker" destination="ovf-Ug-v4Z" id="bxu-fE-DbM"/>
                         <outlet property="stationTo" destination="ItS-3w-VXO" id="GfR-PP-tfh"/>
                         <outlet property="statonFrom" destination="eqQ-nK-zQv" id="qXL-kr-WOJ"/>
                     </connections>

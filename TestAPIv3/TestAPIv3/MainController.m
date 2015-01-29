@@ -22,20 +22,36 @@
     [super viewDidLoad];
     
     self.navigationItem.title = NSStringFromClass([MainController class]);
+    
+    // Picker
+    self.datePicker.datePickerMode = UIDatePickerModeDate;
+    self.datePicker.minimumDate = [NSDate date];
+    self.datePicker.maximumDate = [[NSDate date] dateByAddingTimeInterval:60 * 60 * 24 * 45];
+    [self.datePicker addTarget:self
+                        action:@selector(changeValueInDatePicker:)
+              forControlEvents:UIControlEventValueChanged];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+// передаем параметры в RoutesController
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showRoutes"]) {
         RoutesController *controller = (RoutesController *)segue.destinationViewController;
         controller.stationFrom = self.statonFrom.text;
         controller.stationTo = self.stationTo.text;
+        controller.startDate = self.startDate;
     }
+}
+
+- (void)changeValueInDatePicker:(id)sender {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone localTimeZone];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+    self.startDate = [dateFormatter stringFromDate:self.datePicker.date];
 }
 
 @end

@@ -22,12 +22,12 @@ typedef void (^NetworkBlock)(BOOL succes, id data, NSError *error);
 -(void)open:(NetworkBlock)block;
 
 // Get trains
-- (void)getRoutes:(NSString *)stationFrom to:(NSString *)stationTo and:(NetworkBlock)block;
+- (void)getRoutes:(NSString *)stationFrom to:(NSString *)stationTo forStartDate:(NSString *)date and:(NetworkBlock)block;
 
 // Получить цены. Если передан только номер поезда - вернет цены на все типы вагонов этого поезда
 // Если указан тип вагона, то вернет цену только на тип данного вагона. Если тип С то нужно указывать класс
 
-- (NSArray *)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls;
+- (void)getPrices:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls and:(NetworkBlock)block;
 
 - (NSDictionary *)getPlaces:(NSString *)train withType:(NSString *)type andClass:(NSString *)cls;
 

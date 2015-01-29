@@ -38,36 +38,46 @@
         }
         [self removeActivityView];
     }];
-    
-//    Routes *routes = [routes routeFromDictionary:data];
 }
 
-/*
-  Показать таблицу, убрать загрузчик. Выполняет транзакцию получения рейсов
- */
+// Показать таблицу, убрать загрузчик. Выполняет транзакцию получения рейсов
 - (void)removeActivityView {
-
-    [[SessionManager sharedManager] getRoutes:self.stationFrom to:self.stationTo and:^(BOOL succes, id data, NSError *error) {
+    [[SessionManager sharedManager] getRoutes:self.stationFrom to:self.stationTo forStartDate:self.startDate and:^(BOOL succes, id data, NSError *error) {
         if (!data)
             return;
-        
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data
-                                                           options:NSJSONWritingPrettyPrinted
-                                                             error:&error];
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                                   options:NSJSONReadingMutableContainers
-                                                                     error:&error];
-//        Routes *routes = [Routes routeFromDictionary:dictionary];
-        routesArray = [dictionary objectForKey:@"items"];
+        // Routes *routes = [Routes routeFromDictionary:[self dictionaryFromJSON:data with:error]];
+        routesArray = [[self dictionaryFromJSON:data with:error] objectForKey:@"items"];
         [self.tableView reloadData];
         [DejalActivityView removeView];
         [self.tableView setHidden:NO];
+        [self loadPrices];
+    }];
+}
+
+- (void)loadPrices {
+    [[SessionManager sharedManager] getPrices:nil withType:nil andClass:nil and:^(BOOL succes, id data, NSError *error) {
+        if (!data) {
+            return;
+        }
+        NSLog(@"getPrices: %@", [self dictionaryFromJSON:data with:error]);
     }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSDictionary *)dictionaryFromJSON:(NSData *)data with:(NSError *)error {
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
+    return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+}
+
+- (NSDate *)getDateFromString:(NSString *)stringDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
+    NSDate *postDate = [dateFormatter dateFromString:stringDate];
+    return postDate;
 }
 
 #pragma mark - UITableViewDataSource
@@ -92,14 +102,6 @@
 
 #pragma mark - UITableViewDelegate
 
-- (NSDate *)getDateFromString:(NSString *)stringDate {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
-    NSDate *postDate = [dateFormatter dateFromString:stringDate];
-    return postDate;
-}
-
-
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RoutesCustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     cell.number.text = [route objectForKey:@"number"];
@@ -108,8 +110,6 @@
     // Блок время
     // EEE d MMM HH:MM"
 //    NSLog(@"getDateFromString %@", [self getDateFromString:[route objectForKey:@"travel_time"]]);
-
-
     
     cell.departureDate.text = [route objectForKey:@"departure_date"];
     cell.arrivalDate.text = [route objectForKey:@"arrival_date"];

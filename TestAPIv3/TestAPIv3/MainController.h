@@ -10,7 +10,10 @@
 
 @interface MainController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *statonFrom;
 @property (weak, nonatomic) IBOutlet UITextField *stationTo;
+
+@property (nonatomic, strong) NSString *startDate;
 
 @end
