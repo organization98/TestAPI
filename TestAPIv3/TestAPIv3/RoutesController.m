@@ -11,6 +11,7 @@
 #import "SessionManager.h"
 #import "PricesManager.h"
 #import "DejalActivityView.h"
+#import "SchemeController.h"
 
 @interface RoutesController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -52,7 +53,6 @@
     [self.tableView reloadData];
     [DejalActivityView removeView];
     [self.tableView setHidden:NO];
-    [self loadPrices];
 }
 
 // Показать таблицу, убрать загрузчик. Выполняет транзакцию получения рейсов
@@ -64,19 +64,17 @@
         [self.tableView reloadData];
         [DejalActivityView removeView];
         [self.tableView setHidden:NO];
-        [self loadPrices];
     }];
 }
 
-- (void)loadPrices {
-    
-    NSString *train = @"079П";
-    
-    [[SessionManager sharedManager] getPrices:train withType:nil andClass:nil and:^(BOOL succes, id data, NSError *error) {
-        if (!data) {
-            return;
-        }
-    }];
+// передаем параметры в SchemeController
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showScheme"]) {
+        SchemeController *controller = (SchemeController *)segue.destinationViewController;
+        controller.wagonType = @"П";
+        controller.placesDict = @{@"01" : @"free",
+                                  @"01" : @"free",};
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -144,8 +142,6 @@
         NSDictionary *prices = [pricesManager getPrice:cell.trainNumber from:cell];
         [cell addPriceToLabel:prices];
     }
-    
-
 }
 
 @end

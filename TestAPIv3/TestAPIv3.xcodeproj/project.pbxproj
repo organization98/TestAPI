@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320406F91A7BA321006D12DC /* 1st Class 56 Seats.png in Resources */ = {isa = PBXBuildFile; fileRef = 320406F61A7BA321006D12DC /* 1st Class 56 Seats.png */; };
+		320406FA1A7BA321006D12DC /* 1st Class 56 Seats@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 320406F71A7BA321006D12DC /* 1st Class 56 Seats@2x.png */; };
+		320406FB1A7BA321006D12DC /* 1st Class 56 Seats@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 320406F81A7BA321006D12DC /* 1st Class 56 Seats@3x.png */; };
+		320407001A7BA378006D12DC /* forward-seat-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 320406FC1A7BA378006D12DC /* forward-seat-orange.png */; };
+		320407011A7BA378006D12DC /* forward-seat-orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 320406FD1A7BA378006D12DC /* forward-seat-orange@2x.png */; };
+		320407021A7BA378006D12DC /* forward-seat.png in Resources */ = {isa = PBXBuildFile; fileRef = 320406FE1A7BA378006D12DC /* forward-seat.png */; };
+		320407031A7BA378006D12DC /* forward-seat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 320406FF1A7BA378006D12DC /* forward-seat@2x.png */; };
+		320407061A7BBA6A006D12DC /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 320407051A7BBA6A006D12DC /* CustomButton.m */; };
+		3216556D1A7B367B003CB46C /* SchemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3216556C1A7B367B003CB46C /* SchemeController.m */; };
 		32237EF41A78962100253768 /* Routes.m in Sources */ = {isa = PBXBuildFile; fileRef = 32237EF31A78962100253768 /* Routes.m */; };
 		322485141A767D0800284BB0 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 322485021A767D0800284BB0 /* AFHTTPRequestOperation.m */; };
 		322485151A767D0800284BB0 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 322485041A767D0800284BB0 /* AFHTTPRequestOperationManager.m */; };
@@ -45,6 +54,11 @@
 		32A0695B1A7668E100015743 /* TestAPIv3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A0695A1A7668E100015743 /* TestAPIv3Tests.m */; };
 		32A069661A766C7400015743 /* RoutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069651A766C7400015743 /* RoutesController.m */; };
 		32A0696A1A7670AB00015743 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069691A7670AB00015743 /* SessionManager.m */; };
+		32F60CD01A7B466A00FD273A /* Kupe40.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F60CCD1A7B466A00FD273A /* Kupe40.png */; };
+		32F60CD11A7B466A00FD273A /* Kupe40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F60CCE1A7B466A00FD273A /* Kupe40@2x.png */; };
+		32F60CD21A7B466A00FD273A /* Kupe40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F60CCF1A7B466A00FD273A /* Kupe40@3x.png */; };
+		32F60CD51A7B749E00FD273A /* SchemeType40.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F60CD41A7B749E00FD273A /* SchemeType40.m */; };
+		32F60CD71A7B74D200FD273A /* SchemeType40.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F60CD61A7B74D200FD273A /* SchemeType40.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +72,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		320406F61A7BA321006D12DC /* 1st Class 56 Seats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1st Class 56 Seats.png"; path = "Resources/Cars/1st Class 56 Seats.png"; sourceTree = "<group>"; };
+		320406F71A7BA321006D12DC /* 1st Class 56 Seats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1st Class 56 Seats@2x.png"; path = "Resources/Cars/1st Class 56 Seats@2x.png"; sourceTree = "<group>"; };
+		320406F81A7BA321006D12DC /* 1st Class 56 Seats@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1st Class 56 Seats@3x.png"; path = "Resources/Cars/1st Class 56 Seats@3x.png"; sourceTree = "<group>"; };
+		320406FC1A7BA378006D12DC /* forward-seat-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forward-seat-orange.png"; path = "Resources/Choose seats/forward-seat-orange.png"; sourceTree = "<group>"; };
+		320406FD1A7BA378006D12DC /* forward-seat-orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forward-seat-orange@2x.png"; path = "Resources/Choose seats/forward-seat-orange@2x.png"; sourceTree = "<group>"; };
+		320406FE1A7BA378006D12DC /* forward-seat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forward-seat.png"; path = "Resources/Choose seats/forward-seat.png"; sourceTree = "<group>"; };
+		320406FF1A7BA378006D12DC /* forward-seat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forward-seat@2x.png"; path = "Resources/Choose seats/forward-seat@2x.png"; sourceTree = "<group>"; };
+		320407041A7BBA6A006D12DC /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		320407051A7BBA6A006D12DC /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		3216556B1A7B367B003CB46C /* SchemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeController.h; sourceTree = "<group>"; };
+		3216556C1A7B367B003CB46C /* SchemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeController.m; sourceTree = "<group>"; };
 		32237EF21A78962100253768 /* Routes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Routes.h; sourceTree = "<group>"; };
 		32237EF31A78962100253768 /* Routes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Routes.m; sourceTree = "<group>"; };
 		322485011A767D0800284BB0 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -127,6 +152,12 @@
 		32A069651A766C7400015743 /* RoutesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesController.m; sourceTree = "<group>"; };
 		32A069681A7670AB00015743 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
 		32A069691A7670AB00015743 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		32F60CCD1A7B466A00FD273A /* Kupe40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Kupe40.png; path = Resources/Cars/Kupe40.png; sourceTree = "<group>"; };
+		32F60CCE1A7B466A00FD273A /* Kupe40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kupe40@2x.png"; path = "Resources/Cars/Kupe40@2x.png"; sourceTree = "<group>"; };
+		32F60CCF1A7B466A00FD273A /* Kupe40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kupe40@3x.png"; path = "Resources/Cars/Kupe40@3x.png"; sourceTree = "<group>"; };
+		32F60CD31A7B749E00FD273A /* SchemeType40.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeType40.h; sourceTree = "<group>"; };
+		32F60CD41A7B749E00FD273A /* SchemeType40.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeType40.m; sourceTree = "<group>"; };
+		32F60CD61A7B74D200FD273A /* SchemeType40.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SchemeType40.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +179,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3216556E1A7B3684003CB46C /* SchemeController */ = {
+			isa = PBXGroup;
+			children = (
+				3216556B1A7B367B003CB46C /* SchemeController.h */,
+				3216556C1A7B367B003CB46C /* SchemeController.m */,
+				32F60CD31A7B749E00FD273A /* SchemeType40.h */,
+				32F60CD41A7B749E00FD273A /* SchemeType40.m */,
+				32F60CD61A7B74D200FD273A /* SchemeType40.xib */,
+				320407041A7BBA6A006D12DC /* CustomButton.h */,
+				320407051A7BBA6A006D12DC /* CustomButton.m */,
+			);
+			name = SchemeController;
+			sourceTree = "<group>";
+		};
 		32237EEF1A7895D300253768 /* RoutesController */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +302,16 @@
 		3270CD4B1A78FD75004C27CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				320406FC1A7BA378006D12DC /* forward-seat-orange.png */,
+				320406FD1A7BA378006D12DC /* forward-seat-orange@2x.png */,
+				320406FE1A7BA378006D12DC /* forward-seat.png */,
+				320406FF1A7BA378006D12DC /* forward-seat@2x.png */,
+				320406F61A7BA321006D12DC /* 1st Class 56 Seats.png */,
+				320406F71A7BA321006D12DC /* 1st Class 56 Seats@2x.png */,
+				320406F81A7BA321006D12DC /* 1st Class 56 Seats@3x.png */,
+				32F60CCD1A7B466A00FD273A /* Kupe40.png */,
+				32F60CCE1A7B466A00FD273A /* Kupe40@2x.png */,
+				32F60CCF1A7B466A00FD273A /* Kupe40@3x.png */,
 				3254EEEA1A790F420010EA2A /* logo.png */,
 				3254EEEB1A790F420010EA2A /* logo@2x.png */,
 				3254EEEC1A790F420010EA2A /* logo@3x.png */,
@@ -293,6 +348,7 @@
 				32237EF11A7895F900253768 /* AppDelegate */,
 				32237EF01A7895EA00253768 /* MainController */,
 				32237EEF1A7895D300253768 /* RoutesController */,
+				3216556E1A7B3684003CB46C /* SchemeController */,
 				32A069481A7668E100015743 /* Main.storyboard */,
 				3270CD4B1A78FD75004C27CE /* Resources */,
 				32A0694B1A7668E100015743 /* Images.xcassets */,
@@ -421,14 +477,25 @@
 			files = (
 				32A0694A1A7668E100015743 /* Main.storyboard in Resources */,
 				32A0694F1A7668E100015743 /* LaunchScreen.xib in Resources */,
+				32F60CD01A7B466A00FD273A /* Kupe40.png in Resources */,
+				320407031A7BA378006D12DC /* forward-seat@2x.png in Resources */,
+				32F60CD11A7B466A00FD273A /* Kupe40@2x.png in Resources */,
 				3270CD4A1A78DEEB004C27CE /* RoutesCustomCell.xib in Resources */,
 				32A0694C1A7668E100015743 /* Images.xcassets in Resources */,
+				320407021A7BA378006D12DC /* forward-seat.png in Resources */,
+				320406FB1A7BA321006D12DC /* 1st Class 56 Seats@3x.png in Resources */,
+				32F60CD21A7B466A00FD273A /* Kupe40@3x.png in Resources */,
+				320407001A7BA378006D12DC /* forward-seat-orange.png in Resources */,
 				3254EEED1A790F420010EA2A /* logo.png in Resources */,
+				32F60CD71A7B74D200FD273A /* SchemeType40.xib in Resources */,
 				3270CD511A78FE21004C27CE /* pin-orange@3x.png in Resources */,
 				3270CD501A78FE21004C27CE /* pin-orange@2x.png in Resources */,
+				320406F91A7BA321006D12DC /* 1st Class 56 Seats.png in Resources */,
 				3254EEEE1A790F420010EA2A /* logo@2x.png in Resources */,
 				3254EEEF1A790F420010EA2A /* logo@3x.png in Resources */,
+				320407011A7BA378006D12DC /* forward-seat-orange@2x.png in Resources */,
 				3270CD4F1A78FE21004C27CE /* pin-orange.png in Resources */,
+				320406FA1A7BA321006D12DC /* 1st Class 56 Seats@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +513,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F60CD51A7B749E00FD273A /* SchemeType40.m in Sources */,
 				322485191A767D0800284BB0 /* AFURLConnectionOperation.m in Sources */,
 				322485141A767D0800284BB0 /* AFHTTPRequestOperation.m in Sources */,
 				322485321A767D1600284BB0 /* UIButton+AFNetworking.m in Sources */,
+				320407061A7BBA6A006D12DC /* CustomButton.m in Sources */,
 				322485171A767D0800284BB0 /* AFNetworkReachabilityManager.m in Sources */,
 				322485341A767D1600284BB0 /* UIProgressView+AFNetworking.m in Sources */,
+				3216556D1A7B367B003CB46C /* SchemeController.m in Sources */,
 				3234A0191A7A40490001EEB8 /* PricesManager.m in Sources */,
 				3224851C1A767D0800284BB0 /* AFURLSessionManager.m in Sources */,
 				3270CD491A78DEEB004C27CE /* RoutesCustomCell.m in Sources */,
