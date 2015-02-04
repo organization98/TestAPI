@@ -16,4 +16,6 @@
 @property (strong, nonatomic) NSString *wagonType;
 @property (strong, nonatomic) NSDictionary *placesDict;
 
+@property (strong, nonatomic) NSURL *url;
+
 @end

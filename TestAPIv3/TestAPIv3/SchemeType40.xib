@@ -6,8 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchemeType40">
             <connections>
-                <outlet property="imageScheme" destination="DOz-Qf-MgU" id="Txp-Dw-MXd"/>
                 <outlet property="viewScheme" destination="iN0-l3-epB" id="NZz-Ps-O4g"/>
+                <outletCollection property="buttonsLow" destination="OcR-Fg-zJd" id="Bsm-Pd-Gab"/>
+                <outletCollection property="buttonsLow" destination="teF-bJ-gGi" id="8FY-2q-fqh"/>
+                <outletCollection property="buttonsTop" destination="heZ-GN-vIM" id="Rcm-sG-JuX"/>
+                <outletCollection property="buttonsTop" destination="HWH-HW-feQ" id="6yX-je-Sy0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,27 +18,41 @@
             <rect key="frame" x="0.0" y="0.0" width="1043" height="211"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-seat.png" translatesAutoresizingMaskIntoConstraints="NO" id="9UT-SR-iJl">
-                    <rect key="frame" x="207" y="8" width="30" height="63"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kupe40.png" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-Qf-MgU">
+                    <rect key="frame" x="0.0" y="0.0" width="1043" height="211"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-seat.png" translatesAutoresizingMaskIntoConstraints="NO" id="jBY-uo-YHV">
-                    <rect key="frame" x="261" y="140" width="30" height="63"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-seat.png" translatesAutoresizingMaskIntoConstraints="NO" id="m9D-I2-KkT">
-                    <rect key="frame" x="313" y="140" width="30" height="63"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-seat.png" translatesAutoresizingMaskIntoConstraints="NO" id="FME-fA-RGC">
-                    <rect key="frame" x="207" y="140" width="30" height="63"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-seat.png" translatesAutoresizingMaskIntoConstraints="NO" id="Edr-fT-iYP">
-                    <rect key="frame" x="313" y="8" width="30" height="63"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-seat.png" translatesAutoresizingMaskIntoConstraints="NO" id="GJZ-MG-Dw4">
-                    <rect key="frame" x="261" y="8" width="30" height="63"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1st Class 56 Seats.png" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-Qf-MgU">
-                    <rect key="frame" x="-8" y="0.0" width="1043" height="211"/>
-                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teF-bJ-gGi">
+                    <rect key="frame" x="183" y="42" width="25" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="02">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcR-Fg-zJd">
+                    <rect key="frame" x="210" y="42" width="25" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="04">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWH-HW-feQ">
+                    <rect key="frame" x="178" y="8" width="25" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="01">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-GN-vIM">
+                    <rect key="frame" x="216" y="8" width="25" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="56">
+                        <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -43,7 +60,6 @@
         </view>
     </objects>
     <resources>
-        <image name="1st Class 56 Seats.png" width="2086" height="420"/>
-        <image name="forward-seat.png" width="60" height="126"/>
+        <image name="Kupe40.png" width="2085" height="422"/>
     </resources>
 </document>

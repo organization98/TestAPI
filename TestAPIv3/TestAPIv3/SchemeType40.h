@@ -10,11 +10,9 @@
 
 @interface SchemeType40 : UIView
 
-- (IBAction)actionButtons:(id)sender;
-
 @property (strong, nonatomic) IBOutlet UIView *viewScheme;
-@property (weak, nonatomic) IBOutlet UIImageView *imageScheme;
 
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *btnSets;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsTop;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonsLow;
 
 @end

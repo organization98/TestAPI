@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) NSString *number;
 
-+(CustomButton *)buttonWithNumber:(NSString *)number;
++ (CustomButton *)buttonWithNumber:(NSString *)number with:(CGRect)rect and:(NSString *)orientation;
 
 @end

@@ -15,8 +15,11 @@
 @property (strong, nonatomic) NSString *stationTo;
 @property (strong, nonatomic) NSString *startDate;
 
+@property (strong, nonatomic) NSString *number;
+@property (strong, nonatomic) NSString *wagonNumber;
 @property (strong, nonatomic) NSString *wagonType;
 @property (strong, nonatomic) NSDictionary *placesDict;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

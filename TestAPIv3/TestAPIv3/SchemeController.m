@@ -7,6 +7,7 @@
 //
 
 #import "SchemeController.h"
+#import "WebViewController.h"
 #import "SchemeType40.h"
 
 @interface SchemeController ()
@@ -26,6 +27,14 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+// передаем параметры в WebViewController
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"showWebView"]) {
+        WebViewController *controller = (WebViewController *)segue.destinationViewController;
+        controller.url = [NSURL URLWithString:@"http://api.ibp.org.ua/"];
+    }
 }
 
 @end

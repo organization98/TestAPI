@@ -20,7 +20,17 @@
 @implementation RoutesController {
     NSArray *routesArray;
     NSDictionary *route;
+    NSDictionary *placesDict;
     PricesManager *pricesManager;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        placesDict = [[NSDictionary alloc] init];
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -45,15 +55,15 @@
     }];
 }
 
-- (void)removeActivityView2 {
-    NSDictionary *dict = [[SessionManager sharedManager] getRoutesWithDictionary:self.stationFrom to:self.stationTo forStartDate:self.startDate and:^(BOOL succes, id data, NSError *error) {
-        
-    }];
-    routesArray = [dict objectForKey:@"items"];
-    [self.tableView reloadData];
-    [DejalActivityView removeView];
-    [self.tableView setHidden:NO];
-}
+//- (void)removeActivityView2 {
+//    NSDictionary *dict = [[SessionManager sharedManager] getRoutesWithDictionary:self.stationFrom to:self.stationTo forStartDate:self.startDate and:^(BOOL succes, id data, NSError *error) {
+//        
+//    }];
+//    routesArray = [dict objectForKey:@"items"];
+//    [self.tableView reloadData];
+//    [DejalActivityView removeView];
+//    [self.tableView setHidden:NO];
+//}
 
 // Показать таблицу, убрать загрузчик. Выполняет транзакцию получения рейсов
 - (void)removeActivityView {
@@ -96,9 +106,13 @@
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [routesArray count];
+}
+
 // сколько рядов в секции под индексом section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [routesArray count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -135,6 +149,13 @@
     cell.wagonType = [route objectForKey:@"wagon_type"];
 
     cell.labelCost.text = nil;
+    
+    self.number = [route objectForKey:@"number"];
+    self.wagonNumber = [route objectForKey:@"wagon_number"];
+    self.wagonType = [route objectForKey:@"wagon_type"];
+//    self.placesDict = [route objectForKey:@""]
+    NSLog(@"Поезд %@, Вагон %@, Тип вагона %@", [route objectForKey:@"number"], [route objectForKey:@"wagon_number"], [route objectForKey:@"wagon_type"]);
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:cell selector:@selector(updatePrice:) name:cell.labelNumber.text object:pricesManager];
     

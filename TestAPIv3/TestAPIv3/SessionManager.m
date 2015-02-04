@@ -88,10 +88,10 @@
         }
     }];
 }
-
+/*
 - (NSDictionary *)getRoutesWithDictionary:(NSString *)stationFrom to:(NSString *)stationTo forStartDate:(NSString *)date and:(NetworkBlock)block {
     // выполнение транзакции "trains"
-    NSURL *requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/trains?from=%@&to=%@&startDate=%@&session=%@", domain, stationFrom, stationTo, date, session]];
+    NSURL *requestURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/trains?from=%@&to=%@&startDate=%@&session=%@", domain, date, stationTo, date, session]];
     [self requestFromURL:requestURL completion:^(BOOL succes, id data, NSError *error) {
         if (succes == NO) {
             NSLog(@"%@", [[error userInfo] objectForKey:@"message"]);
@@ -104,7 +104,7 @@
     }];
     return dict;
 }
-
+*/
 - (NSDictionary *)dictionaryFromJSON:(NSData *)data with:(NSError *)error {
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
     return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
