@@ -165,42 +165,32 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7za-py-G8M">
                                 <rect key="frame" x="16" y="381" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.42352941179999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-0I-a8T">
                                 <rect key="frame" x="56" y="381" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.42352941179999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pM9-G8-zCt">
                                 <rect key="frame" x="96" y="381" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.42352941179999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beY-eD-1l4">
                                 <rect key="frame" x="136" y="381" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.42352941179999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D5-a0-7Wv">
                                 <rect key="frame" x="184" y="373" width="120" height="46"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.42352941179999998" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Buy">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -243,6 +233,11 @@
                     <connections>
                         <outlet property="schemeView" destination="o50-kM-N08" id="PSr-SA-aL1"/>
                         <outlet property="scrollView" destination="nun-Cr-Tik" id="kds-ns-283"/>
+                        <outletCollection property="buttonStyle" destination="7D5-a0-7Wv" id="ySw-2K-x2H"/>
+                        <outletCollection property="buttonStyle" destination="beY-eD-1l4" id="PBN-cM-mLc"/>
+                        <outletCollection property="buttonStyle" destination="pM9-G8-zCt" id="lwo-Sd-T2e"/>
+                        <outletCollection property="buttonStyle" destination="Fv5-0I-a8T" id="wi0-7Z-skS"/>
+                        <outletCollection property="buttonStyle" destination="7za-py-G8M" id="lzY-Fk-lbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N98-jJ-2DI" userLabel="First Responder" sceneMemberID="firstResponder"/>

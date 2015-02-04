@@ -10,6 +10,9 @@
 
 @interface SchemeController : UIViewController
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonStyle;
+
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *schemeView;
 

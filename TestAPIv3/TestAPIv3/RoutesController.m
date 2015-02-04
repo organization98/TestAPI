@@ -130,7 +130,8 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RoutesCustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     cell.labelNumber.text = [route objectForKey:@"number"];
-    cell.model.text = [NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]];
+    
+    cell.model.text = [[NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]] capitalizedString];
     
     // Блок время
     // EEE d MMM HH:MM"

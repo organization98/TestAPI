@@ -23,6 +23,13 @@
     self.scrollView.contentSize = CGSizeMake(1043, 211);
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
+    
+    // внешний вид кнопок "корзины", "купить"
+    for (UIButton *buttons in self.buttonStyle) {
+        buttons.backgroundColor = [UIColor colorWithRed:0.9 green:0.42 blue:0.23 alpha:1];
+        buttons.tintColor = [UIColor whiteColor];
+        buttons.layer.cornerRadius = 5;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
