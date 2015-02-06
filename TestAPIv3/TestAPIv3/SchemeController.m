@@ -40,7 +40,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showWebView"]) {
         WebViewController *controller = (WebViewController *)segue.destinationViewController;
-        controller.url = [NSURL URLWithString:@"http://api.ibp.org.ua/"];
+        controller.url = [NSURL URLWithString:@"http://booking.ibp.org.ua/payment/pay?price=14560&description=Hello!/"];
     }
 }
 

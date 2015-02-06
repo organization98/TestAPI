@@ -25,6 +25,8 @@
     // изменение цвета NavigationBar и цвета шрифта кнопок
     [[UINavigationBar appearance] setBarTintColor:GlobalOceanGreenColor];
     
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                         [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
     

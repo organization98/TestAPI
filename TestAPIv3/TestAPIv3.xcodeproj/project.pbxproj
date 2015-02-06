@@ -54,6 +54,7 @@
 		324A4B431A7E9CE1003AFC6A /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 324A4B321A7E9CE1003AFC6A /* RobotoCondensed-Italic.ttf */; };
 		324A4B441A7E9CE1003AFC6A /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 324A4B331A7E9CE1003AFC6A /* RobotoCondensed-Light.ttf */; };
 		324A4B451A7E9CE1003AFC6A /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 324A4B341A7E9CE1003AFC6A /* RobotoCondensed-LightItalic.ttf */; };
+		324ECF3B1A839C09002ECA41 /* NSURLRequest+IgnoreSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 324ECF3A1A839C09002ECA41 /* NSURLRequest+IgnoreSSL.m */; };
 		3254EEED1A790F420010EA2A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEA1A790F420010EA2A /* logo.png */; };
 		3254EEEE1A790F420010EA2A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEB1A790F420010EA2A /* logo@2x.png */; };
 		3254EEEF1A790F420010EA2A /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEC1A790F420010EA2A /* logo@3x.png */; };
@@ -62,6 +63,11 @@
 		3270CD4F1A78FE21004C27CE /* pin-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD4C1A78FE21004C27CE /* pin-orange.png */; };
 		3270CD501A78FE21004C27CE /* pin-orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD4D1A78FE21004C27CE /* pin-orange@2x.png */; };
 		3270CD511A78FE21004C27CE /* pin-orange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD4E1A78FE21004C27CE /* pin-orange@3x.png */; };
+		328804621A8223C500456D33 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 3288045F1A8223C500456D33 /* time.png */; };
+		328804631A8223C500456D33 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 328804601A8223C500456D33 /* time@2x.png */; };
+		328804641A8223C500456D33 /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 328804611A8223C500456D33 /* time@3x.png */; };
+		328804661A822E8D00456D33 /* Kupe 36 with Seats@3x UPDATE1043.png in Resources */ = {isa = PBXBuildFile; fileRef = 328804651A822E8D00456D33 /* Kupe 36 with Seats@3x UPDATE1043.png */; };
+		328EF2471A84E05A00348C9C /* NSString+NSDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 328EF2461A84E05A00348C9C /* NSString+NSDateFormatter.m */; };
 		32A069411A7668E100015743 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069401A7668E100015743 /* main.m */; };
 		32A069441A7668E100015743 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069431A7668E100015743 /* AppDelegate.m */; };
 		32A069471A7668E100015743 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069461A7668E100015743 /* MainController.m */; };
@@ -161,6 +167,8 @@
 		324A4B321A7E9CE1003AFC6A /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		324A4B331A7E9CE1003AFC6A /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		324A4B341A7E9CE1003AFC6A /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		324ECF391A839C09002ECA41 /* NSURLRequest+IgnoreSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+IgnoreSSL.h"; sourceTree = "<group>"; };
+		324ECF3A1A839C09002ECA41 /* NSURLRequest+IgnoreSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+IgnoreSSL.m"; sourceTree = "<group>"; };
 		3254EEEA1A790F420010EA2A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/Splash/logo.png; sourceTree = "<group>"; };
 		3254EEEB1A790F420010EA2A /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "Resources/Splash/logo@2x.png"; sourceTree = "<group>"; };
 		3254EEEC1A790F420010EA2A /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@3x.png"; path = "Resources/Splash/logo@3x.png"; sourceTree = "<group>"; };
@@ -170,6 +178,12 @@
 		3270CD4C1A78FE21004C27CE /* pin-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin-orange.png"; path = "Resources/General/pin-orange.png"; sourceTree = "<group>"; };
 		3270CD4D1A78FE21004C27CE /* pin-orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin-orange@2x.png"; path = "Resources/General/pin-orange@2x.png"; sourceTree = "<group>"; };
 		3270CD4E1A78FE21004C27CE /* pin-orange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin-orange@3x.png"; path = "Resources/General/pin-orange@3x.png"; sourceTree = "<group>"; };
+		3288045F1A8223C500456D33 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		328804601A8223C500456D33 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
+		328804611A8223C500456D33 /* time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@3x.png"; sourceTree = "<group>"; };
+		328804651A822E8D00456D33 /* Kupe 36 with Seats@3x UPDATE1043.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kupe 36 with Seats@3x UPDATE1043.png"; sourceTree = "<group>"; };
+		328EF2451A84E05A00348C9C /* NSString+NSDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSDateFormatter.h"; sourceTree = "<group>"; };
+		328EF2461A84E05A00348C9C /* NSString+NSDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSDateFormatter.m"; sourceTree = "<group>"; };
 		32A0693B1A7668E100015743 /* TestAPIv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAPIv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A0693F1A7668E100015743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32A069401A7668E100015743 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -363,6 +377,10 @@
 		3270CD4B1A78FD75004C27CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				328804651A822E8D00456D33 /* Kupe 36 with Seats@3x UPDATE1043.png */,
+				3288045F1A8223C500456D33 /* time.png */,
+				328804601A8223C500456D33 /* time@2x.png */,
+				328804611A8223C500456D33 /* time@3x.png */,
 				324A4B461A7E9E76003AFC6A /* Roboto */,
 				320406FC1A7BA378006D12DC /* forward-seat-orange.png */,
 				320406FD1A7BA378006D12DC /* forward-seat-orange@2x.png */,
@@ -454,6 +472,8 @@
 				32A069691A7670AB00015743 /* SessionManager.m */,
 				3234A0171A7A40490001EEB8 /* PricesManager.h */,
 				3234A0181A7A40490001EEB8 /* PricesManager.m */,
+				328EF2451A84E05A00348C9C /* NSString+NSDateFormatter.h */,
+				328EF2461A84E05A00348C9C /* NSString+NSDateFormatter.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -463,6 +483,8 @@
 			children = (
 				32B3B0831A81EA90006C1CC8 /* WebViewController.h */,
 				32B3B0841A81EA90006C1CC8 /* WebViewController.m */,
+				324ECF391A839C09002ECA41 /* NSURLRequest+IgnoreSSL.h */,
+				324ECF3A1A839C09002ECA41 /* NSURLRequest+IgnoreSSL.m */,
 			);
 			name = WebViewController;
 			sourceTree = "<group>";
@@ -552,6 +574,7 @@
 				324A4B3F1A7E9CE1003AFC6A /* Roboto-Thin.ttf in Resources */,
 				32A0694A1A7668E100015743 /* Main.storyboard in Resources */,
 				32A0694F1A7668E100015743 /* LaunchScreen.xib in Resources */,
+				328804621A8223C500456D33 /* time.png in Resources */,
 				324A4B401A7E9CE1003AFC6A /* Roboto-ThinItalic.ttf in Resources */,
 				324A4B431A7E9CE1003AFC6A /* RobotoCondensed-Italic.ttf in Resources */,
 				324A4B3B1A7E9CE1003AFC6A /* Roboto-LightItalic.ttf in Resources */,
@@ -575,16 +598,19 @@
 				3254EEED1A790F420010EA2A /* logo.png in Resources */,
 				324A4B371A7E9CE1003AFC6A /* Roboto-Bold.ttf in Resources */,
 				32F60CD71A7B74D200FD273A /* SchemeType40.xib in Resources */,
+				328804661A822E8D00456D33 /* Kupe 36 with Seats@3x UPDATE1043.png in Resources */,
 				3270CD511A78FE21004C27CE /* pin-orange@3x.png in Resources */,
 				3270CD501A78FE21004C27CE /* pin-orange@2x.png in Resources */,
 				324A4B381A7E9CE1003AFC6A /* Roboto-BoldItalic.ttf in Resources */,
 				320406F91A7BA321006D12DC /* 1st Class 56 Seats.png in Resources */,
+				328804641A8223C500456D33 /* time@3x.png in Resources */,
 				3254EEEE1A790F420010EA2A /* logo@2x.png in Resources */,
 				3254EEEF1A790F420010EA2A /* logo@3x.png in Resources */,
 				324A4B411A7E9CE1003AFC6A /* RobotoCondensed-Bold.ttf in Resources */,
 				320407011A7BA378006D12DC /* forward-seat-orange@2x.png in Resources */,
 				3270CD4F1A78FE21004C27CE /* pin-orange.png in Resources */,
 				320406FA1A7BA321006D12DC /* 1st Class 56 Seats@2x.png in Resources */,
+				328804631A8223C500456D33 /* time@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,10 +634,12 @@
 				322485141A767D0800284BB0 /* AFHTTPRequestOperation.m in Sources */,
 				322485321A767D1600284BB0 /* UIButton+AFNetworking.m in Sources */,
 				320407061A7BBA6A006D12DC /* CustomButton.m in Sources */,
+				324ECF3B1A839C09002ECA41 /* NSURLRequest+IgnoreSSL.m in Sources */,
 				322485171A767D0800284BB0 /* AFNetworkReachabilityManager.m in Sources */,
 				322485341A767D1600284BB0 /* UIProgressView+AFNetworking.m in Sources */,
 				3216556D1A7B367B003CB46C /* SchemeController.m in Sources */,
 				3234A0191A7A40490001EEB8 /* PricesManager.m in Sources */,
+				328EF2471A84E05A00348C9C /* NSString+NSDateFormatter.m in Sources */,
 				3224851C1A767D0800284BB0 /* AFURLSessionManager.m in Sources */,
 				3270CD491A78DEEB004C27CE /* RoutesCustomCell.m in Sources */,
 				3224851A1A767D0800284BB0 /* AFURLRequestSerialization.m in Sources */,

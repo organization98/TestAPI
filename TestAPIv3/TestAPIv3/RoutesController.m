@@ -12,6 +12,7 @@
 #import "PricesManager.h"
 #import "DejalActivityView.h"
 #import "SchemeController.h"
+#import "NSString+NSDateFormatter.h"
 
 @interface RoutesController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -129,21 +130,19 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RoutesCustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // блок маршрут
     cell.labelNumber.text = [route objectForKey:@"number"];
+    cell.routeTitle.text = [[NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]] capitalizedString];
     
-    cell.model.text = [[NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]] capitalizedString];
-    
-    // Блок время
-    // EEE d MMM HH:MM"
-    
-    cell.labelDepartureDate.text = [route objectForKey:@"departure_date"];
-    cell.labelArrivalDate.text = [route objectForKey:@"arrival_date"];
+    // блок время
+    cell.labelDepartureDate.text = [NSString dateFromString:[route objectForKey:@"departure_date"]];
+    cell.labelArrivalDate.text = [NSString dateFromString:[route objectForKey:@"arrival_date"]];
     cell.labelTravelTime.text = [route objectForKey:@"travel_time"];
     
     cell.labelWagonType.text = [route objectForKey:@"wagon_type"];
     cell.labelCountPlaces.text = [route objectForKey:@"count"];
     
-    cell.clockImage.image = [UIImage imageNamed:@"pin-orange"];
+    cell.clockImage.image = [UIImage imageNamed:@"time"];
     
     
     cell.trainNumber = [route objectForKey:@"number"];

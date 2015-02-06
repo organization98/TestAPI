@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = NSStringFromClass([MainController class]);
-    
+        
     // Picker
     self.datePicker.datePickerMode = UIDatePickerModeDate;
     self.datePicker.minimumDate = [NSDate date];
