@@ -24,4 +24,11 @@
     return [dateFormatter2 stringFromDate:dateFromString];
 }
 
++ (NSString *)travelTimeFromString:(NSString *)string {
+    NSArray *array = [string componentsSeparatedByString:@":"];
+    NSString *hours = [array objectAtIndex:0];
+    NSString *mins = [array objectAtIndex:1];
+    return [NSString stringWithFormat:@"%li ч : %li м", [hours integerValue], [mins integerValue]];
+}
+
 @end

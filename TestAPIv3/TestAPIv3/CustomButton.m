@@ -16,7 +16,6 @@
 
 + (CustomButton *)buttonWithNumber:(NSString *)number with:(CGRect)rect and:(NSString *)orientation {
     
-    
     // создаем кнопку, задаем Title для кнопки
     CustomButton *btn = [[CustomButton alloc] init];
     btn.layer.cornerRadius = 5;

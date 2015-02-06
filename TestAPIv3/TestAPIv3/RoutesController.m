@@ -98,13 +98,6 @@
     return [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
 }
 
-- (NSDate *)getDateFromString:(NSString *)stringDate {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
-    NSDate *postDate = [dateFormatter dateFromString:stringDate];
-    return postDate;
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -137,13 +130,12 @@
     // блок время
     cell.labelDepartureDate.text = [NSString dateFromString:[route objectForKey:@"departure_date"]];
     cell.labelArrivalDate.text = [NSString dateFromString:[route objectForKey:@"arrival_date"]];
-    cell.labelTravelTime.text = [route objectForKey:@"travel_time"];
+    cell.labelTravelTime.text = [NSString travelTimeFromString:[route objectForKey:@"travel_time"]];
     
     cell.labelWagonType.text = [route objectForKey:@"wagon_type"];
     cell.labelCountPlaces.text = [route objectForKey:@"count"];
     
     cell.clockImage.image = [UIImage imageNamed:@"time"];
-    
     
     cell.trainNumber = [route objectForKey:@"number"];
     cell.wagonType = [route objectForKey:@"wagon_type"];

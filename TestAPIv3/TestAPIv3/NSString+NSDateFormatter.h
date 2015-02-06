@@ -11,5 +11,6 @@
 @interface NSString (NSDateFormatter)
 
 + (NSString *)dateFromString:(NSString *)string;
++ (NSString *)travelTimeFromString:(NSString *)string;
 
 @end
