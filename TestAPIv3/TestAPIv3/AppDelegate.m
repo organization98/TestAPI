@@ -26,19 +26,19 @@
     [[UINavigationBar appearance] setBarTintColor:GlobalOceanGreenColor];
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    
+
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                         [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTranslucent:NO];
-    
+
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; // в iOS7 не работает
+    [[UINavigationBar appearance] setTranslucent:NO]; // в iOS7 не работает
+
     // изменение цвета Toolbar и цвета шрифта кнопок
     [[UIToolbar appearance] setBarTintColor:GlobalOceanGreenColor];
     [[UIToolbar appearance] setTintColor:[UIColor whiteColor]];
-    [[UIToolbar appearance] setTranslucent:NO];
-    
-    // изменение стиля StatusBar
+    [[UIToolbar appearance] setTranslucent:NO]; // в iOS7 не работает
+
+//    // изменение стиля StatusBar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;

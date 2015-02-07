@@ -99,7 +99,7 @@
 }
 
 #pragma mark - UITableViewDataSource
-
+// задаем кол-во секций
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [routesArray count];
 }
@@ -109,13 +109,14 @@
     return 1;
 }
 
+// задаем ячеку для строки с индексом
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RoutesCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if (!cell) {
         [tableView registerNib:[UINib nibWithNibName:@"RoutesCustomCell" bundle:nil] forCellReuseIdentifier:@"myCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
-    route = [routesArray objectAtIndex:indexPath.row];
+    route = [routesArray objectAtIndex:indexPath.section];
     return cell;
 }
 
@@ -123,31 +124,44 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RoutesCustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    cell.clockImage.image = [UIImage imageNamed:@"time"];
+    
     // блок маршрут
     cell.labelNumber.text = [route objectForKey:@"number"];
-    cell.routeTitle.text = [[NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]] capitalizedString];
+    cell.labelRouteTitle.text = [[NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]] capitalizedString];
     
     // блок время
     cell.labelDepartureDate.text = [NSString dateFromString:[route objectForKey:@"departure_date"]];
     cell.labelArrivalDate.text = [NSString dateFromString:[route objectForKey:@"arrival_date"]];
     cell.labelTravelTime.text = [NSString travelTimeFromString:[route objectForKey:@"travel_time"]];
     
-    cell.labelWagonType.text = [route objectForKey:@"wagon_type"];
-    cell.labelCountPlaces.text = [route objectForKey:@"count"];
-    
-    cell.clockImage.image = [UIImage imageNamed:@"time"];
-    
-    cell.trainNumber = [route objectForKey:@"number"];
-    cell.wagonType = [route objectForKey:@"wagon_type"];
-
+    // блок цена
     cell.labelCost.text = nil;
     
+    // блок тип вагона
+    if ([[route objectForKey:@"wagon_type"] isEqualToString:@"П"]) {
+        cell.labelWagonType.text = @"Плацкартный";
+    } else if ([[route objectForKey:@"wagon_type"] isEqualToString:@"К"]) {
+        cell.labelWagonType.text = @"Купейный";
+    } else if ([[route objectForKey:@"wagon_type"] isEqualToString:@"Л"]) {
+        cell.labelWagonType.text = @"Люкс (СВ)";
+    } else {
+        cell.labelWagonType.text = @"Сидячий";
+    }
+    
+    // блок места
+    cell.labelCountPlaces.text = [route objectForKey:@"count"];
+    
+    // --------------------------------------------------------------------------------------
     self.number = [route objectForKey:@"number"];
     self.wagonNumber = [route objectForKey:@"wagon_number"];
     self.wagonType = [route objectForKey:@"wagon_type"];
 //    self.placesDict = [route objectForKey:@""]
     NSLog(@"Поезд %@, Вагон %@, Тип вагона %@", [route objectForKey:@"number"], [route objectForKey:@"wagon_number"], [route objectForKey:@"wagon_type"]);
+    // --------------------------------------------------------------------------------------
     
+    cell.trainNumber = [route objectForKey:@"number"];
+    cell.wagonType = [route objectForKey:@"wagon_type"];
     
     [[NSNotificationCenter defaultCenter] addObserver:cell selector:@selector(updatePrice:) name:cell.labelNumber.text object:pricesManager];
     

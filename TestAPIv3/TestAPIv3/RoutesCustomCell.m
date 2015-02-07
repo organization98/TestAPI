@@ -31,7 +31,7 @@
 - (void)addPriceToLabel:(NSDictionary *)dict {
     if ([[dict objectForKey:self.wagonType] objectForKey:@"cost"]) {
         self.activityView.hidden = YES;
-        self.labelCost = [[UILabel alloc] initWithFrame:CGRectMake(20, 170, 60, 21)];
+        self.labelCost = [[UILabel alloc] initWithFrame:CGRectMake(20, 171, 60, 21)];
         self.labelCost.text = [[dict objectForKey:self.wagonType] objectForKey:@"cost"];
         [self addSubview:self.labelCost];
     }

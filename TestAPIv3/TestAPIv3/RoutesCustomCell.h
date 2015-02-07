@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic)  UILabel *labelCost;
 
-@property (weak, nonatomic) IBOutlet UILabel *routeTitle;
+@property (weak, nonatomic) IBOutlet UILabel *labelRouteTitle;
 @property (weak, nonatomic) IBOutlet UILabel *labelNumber;
 @property (weak, nonatomic) IBOutlet UILabel *labelDepartureDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelArrivalDate;
