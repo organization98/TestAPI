@@ -10,6 +10,7 @@
 #import "RoutesController.h"
 #import "SessionManager.h"
 #import "DejalActivityView.h"
+#import "UIColor+ConvertHEX.h"
 
 @interface MainController ()
 
@@ -20,6 +21,12 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    self.buttonFind.backgroundColor = [UIColor colorWithHexString:@"#F2854C"];
+    self.buttonFind.tintColor = [UIColor colorWithHexString:@"#FFFFFF"];
+    self.buttonFind.layer.cornerRadius = 5;
+    
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#F9F9F9"];
     
     self.navigationItem.title = NSStringFromClass([MainController class]);
         

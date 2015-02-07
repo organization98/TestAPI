@@ -9,6 +9,7 @@
 #import "SchemeController.h"
 #import "WebViewController.h"
 #import "SchemeType40.h"
+#import "UIColor+ConvertHEX.h"
 
 @interface SchemeController ()
 
@@ -26,8 +27,8 @@
     
     // внешний вид кнопок "корзины", "купить"
     for (UIButton *buttons in self.buttonStyle) {
-        buttons.backgroundColor = [UIColor colorWithRed:0.9 green:0.42 blue:0.23 alpha:1];
-        buttons.tintColor = [UIColor whiteColor];
+        buttons.backgroundColor = [UIColor colorWithHexString:@"#F2854C"];
+        buttons.tintColor = [UIColor colorWithHexString:@"#FFFFFF"];
         buttons.layer.cornerRadius = 5;
     }
 }

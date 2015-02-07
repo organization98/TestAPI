@@ -41,6 +41,8 @@
 		3254EEED1A790F420010EA2A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEA1A790F420010EA2A /* logo.png */; };
 		3254EEEE1A790F420010EA2A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEB1A790F420010EA2A /* logo@2x.png */; };
 		3254EEEF1A790F420010EA2A /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3254EEEC1A790F420010EA2A /* logo@3x.png */; };
+		32601E311A86780A00E37A06 /* UIColor+ConvertHEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 32601E301A86780A00E37A06 /* UIColor+ConvertHEX.m */; };
+		3260B6F01A862561003F88FD /* WagonTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3260B6EF1A862561003F88FD /* WagonTypes.plist */; };
 		3270CD491A78DEEB004C27CE /* RoutesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3270CD471A78DEEB004C27CE /* RoutesCustomCell.m */; };
 		3270CD4A1A78DEEB004C27CE /* RoutesCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD481A78DEEB004C27CE /* RoutesCustomCell.xib */; };
 		3270CD4F1A78FE21004C27CE /* pin-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 3270CD4C1A78FE21004C27CE /* pin-orange.png */; };
@@ -155,6 +157,9 @@
 		3254EEEA1A790F420010EA2A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/Splash/logo.png; sourceTree = "<group>"; };
 		3254EEEB1A790F420010EA2A /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "Resources/Splash/logo@2x.png"; sourceTree = "<group>"; };
 		3254EEEC1A790F420010EA2A /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@3x.png"; path = "Resources/Splash/logo@3x.png"; sourceTree = "<group>"; };
+		32601E2F1A86780A00E37A06 /* UIColor+ConvertHEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ConvertHEX.h"; sourceTree = "<group>"; };
+		32601E301A86780A00E37A06 /* UIColor+ConvertHEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ConvertHEX.m"; sourceTree = "<group>"; };
+		3260B6EF1A862561003F88FD /* WagonTypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WagonTypes.plist; sourceTree = "<group>"; };
 		3270CD461A78DEEB004C27CE /* RoutesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesCustomCell.h; sourceTree = "<group>"; };
 		3270CD471A78DEEB004C27CE /* RoutesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesCustomCell.m; sourceTree = "<group>"; };
 		3270CD481A78DEEB004C27CE /* RoutesCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoutesCustomCell.xib; sourceTree = "<group>"; };
@@ -254,6 +259,7 @@
 				3270CD461A78DEEB004C27CE /* RoutesCustomCell.h */,
 				3270CD471A78DEEB004C27CE /* RoutesCustomCell.m */,
 				3270CD481A78DEEB004C27CE /* RoutesCustomCell.xib */,
+				3260B6EF1A862561003F88FD /* WagonTypes.plist */,
 			);
 			name = RoutesController;
 			sourceTree = "<group>";
@@ -474,6 +480,8 @@
 				3234A0181A7A40490001EEB8 /* PricesManager.m */,
 				328EF2451A84E05A00348C9C /* NSString+NSDateFormatter.h */,
 				328EF2461A84E05A00348C9C /* NSString+NSDateFormatter.m */,
+				32601E2F1A86780A00E37A06 /* UIColor+ConvertHEX.h */,
+				32601E301A86780A00E37A06 /* UIColor+ConvertHEX.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -592,6 +600,7 @@
 				328420E51A85084C006F4F8A /* time@3x.png in Resources */,
 				320406FB1A7BA321006D12DC /* 1st Class 56 Seats@3x.png in Resources */,
 				32F60CD21A7B466A00FD273A /* Kupe40@3x.png in Resources */,
+				3260B6F01A862561003F88FD /* WagonTypes.plist in Resources */,
 				320407001A7BA378006D12DC /* forward-seat-orange.png in Resources */,
 				3254EEED1A790F420010EA2A /* logo.png in Resources */,
 				328420CF1A8507E6006F4F8A /* Roboto-Bold.ttf in Resources */,
@@ -660,6 +669,7 @@
 				32237EF41A78962100253768 /* Routes.m in Sources */,
 				322485301A767D1600284BB0 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				3224852F1A767D1600284BB0 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				32601E311A86780A00E37A06 /* UIColor+ConvertHEX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *statonFrom;
 @property (weak, nonatomic) IBOutlet UITextField *stationTo;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonFind;
+
 @property (nonatomic, strong) NSString *startDate;
+
+
 
 @end

@@ -13,6 +13,7 @@
 #import "DejalActivityView.h"
 #import "SchemeController.h"
 #import "NSString+NSDateFormatter.h"
+#import "UIColor+ConvertHEX.h"
 
 @interface RoutesController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -124,6 +125,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(RoutesCustomCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    cell.backgroundColor = [UIColor colorWithHexString:@"#F9F9F9"];
     cell.clockImage.image = [UIImage imageNamed:@"time"];
     
     // блок маршрут
@@ -139,15 +141,9 @@
     cell.labelCost.text = nil;
     
     // блок тип вагона
-    if ([[route objectForKey:@"wagon_type"] isEqualToString:@"П"]) {
-        cell.labelWagonType.text = @"Плацкартный";
-    } else if ([[route objectForKey:@"wagon_type"] isEqualToString:@"К"]) {
-        cell.labelWagonType.text = @"Купейный";
-    } else if ([[route objectForKey:@"wagon_type"] isEqualToString:@"Л"]) {
-        cell.labelWagonType.text = @"Люкс (СВ)";
-    } else {
-        cell.labelWagonType.text = @"Сидячий";
-    }
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"WagonTypes" ofType:@"plist"];
+    NSDictionary *wagonTypesDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    cell.labelWagonType.text = [wagonTypesDict objectForKey:[route objectForKey:@"wagon_type"]];
     
     // блок места
     cell.labelCountPlaces.text = [route objectForKey:@"count"];

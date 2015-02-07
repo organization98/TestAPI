@@ -35,15 +35,13 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykI-64-6ra">
-                                <rect key="frame" x="16" y="278" width="288" height="30"/>
-                                <color key="backgroundColor" red="0.90196078431372551" green="0.42352941176470588" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="16" y="278" width="288" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jVO-HT-bZ1"/>
                                     <constraint firstAttribute="width" constant="288" id="oGK-zT-PZd"/>
-                                    <constraint firstAttribute="height" constant="30" id="xZl-ga-KSA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Find">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -70,6 +68,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="kTi-HV-6XY"/>
                     <connections>
+                        <outlet property="buttonFind" destination="ykI-64-6ra" id="3pd-G0-fUX"/>
                         <outlet property="datePicker" destination="ovf-Ug-v4Z" id="bxu-fE-DbM"/>
                         <outlet property="stationTo" destination="ItS-3w-VXO" id="GfR-PP-tfh"/>
                         <outlet property="statonFrom" destination="eqQ-nK-zQv" id="qXL-kr-WOJ"/>

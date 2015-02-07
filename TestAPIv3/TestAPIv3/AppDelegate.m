@@ -7,9 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+ConvertHEX.h"
 
 // Base colors
-#define GlobalOceanGreenColor [UIColor colorWithRed:0.31f green:0.69f blue:0.48f alpha:1.0f]
+#define GlobalOceanGreenColor [UIColor colorWithHexString:@"#4BB179"] // base green
+#define GlobalWhiteColor [UIColor colorWithHexString:@"#FFFFFF"]
+#define SorbusColor [UIColor colorWithHexString:@"#F2854C"] // orange
+#define HintOfRedColor [UIColor colorWithHexString:@"#FAFAFA"] // base gray
 
 @interface AppDelegate ()
 
@@ -28,14 +32,14 @@
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                        [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+                        GlobalWhiteColor, NSForegroundColorAttributeName, nil]];
 
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; // в iOS7 не работает
+    [[UINavigationBar appearance] setTintColor:GlobalWhiteColor]; // в iOS7 не работает
     [[UINavigationBar appearance] setTranslucent:NO]; // в iOS7 не работает
 
     // изменение цвета Toolbar и цвета шрифта кнопок
     [[UIToolbar appearance] setBarTintColor:GlobalOceanGreenColor];
-    [[UIToolbar appearance] setTintColor:[UIColor whiteColor]];
+    [[UIToolbar appearance] setTintColor:GlobalWhiteColor];
     [[UIToolbar appearance] setTranslucent:NO]; // в iOS7 не работает
 
 //    // изменение стиля StatusBar
