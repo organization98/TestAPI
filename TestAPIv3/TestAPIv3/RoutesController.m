@@ -137,6 +137,15 @@
     cell.labelArrivalDate.text = [NSString dateFromString:[route objectForKey:@"arrival_date"]];
     cell.labelTravelTime.text = [NSString travelTimeFromString:[route objectForKey:@"travel_time"]];
     
+//    cell.labelDepartureDate.text = [route objectForKey:@"departure_date"];
+//    cell.labelArrivalDate.text = [route objectForKey:@"arrival_date"];
+//    cell.labelTravelTime.text = [route objectForKey:@"travel_time"];
+    
+    NSLog(@"\n\n\n%@", [route objectForKey:@"number"]);
+    NSLog(@"%@", [route objectForKey:@"departure_date"]);
+    NSLog(@"%@", [route objectForKey:@"arrival_date"]);
+    NSLog(@"%@", [route objectForKey:@"travel_time"]);
+    
     // блок цена
     cell.labelCost.text = nil;
     

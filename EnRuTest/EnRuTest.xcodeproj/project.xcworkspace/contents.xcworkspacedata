@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:APIWebViewTest.xcodeproj">
+      location = "self:EnRuTest.xcodeproj">
    </FileRef>
 </Workspace>

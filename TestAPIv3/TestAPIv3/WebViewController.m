@@ -49,10 +49,9 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
-// просто УРЛ с переадресацией
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-    NSLog(@"%@", [request URL].absoluteString);
+    NSLog(@"URL: %@", [request URL].absoluteString);
     
     if ([[request URL].absoluteString containsString:@"index2.html"] == YES) {
         [self.navigationController popViewControllerAnimated:YES];
@@ -63,6 +62,7 @@
         [alert show];
         return NO;
     }
+    
     return YES;
 }
 

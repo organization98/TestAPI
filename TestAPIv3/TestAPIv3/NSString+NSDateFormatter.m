@@ -19,7 +19,7 @@
     dateFromString = [dateFormater dateFromString:string];
     
     NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
-    [dateFormatter2 setDateFormat:@"EE, D MMM, hh:mm"];
+    [dateFormatter2 setDateFormat:@"EE, d MMM, hh:mm"];
     
     return [dateFormatter2 stringFromDate:dateFromString];
 }

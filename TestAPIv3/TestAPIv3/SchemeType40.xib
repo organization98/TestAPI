@@ -19,8 +19,12 @@
             <rect key="frame" x="0.0" y="0.0" width="1043" height="211"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kupe40.png" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-Qf-MgU">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kupe40.png" translatesAutoresizingMaskIntoConstraints="NO" id="DOz-Qf-MgU">
                     <rect key="frame" x="0.0" y="0.0" width="1043" height="211"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="211" id="M9G-XJ-klo"/>
+                        <constraint firstAttribute="width" constant="1043" id="eRs-SD-0nc"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teF-bJ-gGi">
                     <rect key="frame" x="183" y="42" width="25" height="50"/>
@@ -55,6 +59,12 @@
                     </state>
                 </button>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DOz-Qf-MgU" secondAttribute="bottom" id="6Uq-7J-pRJ"/>
+                <constraint firstItem="DOz-Qf-MgU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Dfj-FZ-1xe"/>
+                <constraint firstItem="DOz-Qf-MgU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vm9-hg-OYa"/>
+                <constraint firstAttribute="trailing" secondItem="DOz-Qf-MgU" secondAttribute="trailing" id="xuY-jv-CRM"/>
+            </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="244.5" y="315.5"/>
