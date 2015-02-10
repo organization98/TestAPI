@@ -43,11 +43,11 @@
         WebViewController *controller = (WebViewController *)segue.destinationViewController;
         
         // Test URLs
-        NSString *testStr = @"http://api.ibp.org.ua/";
+//        NSString *testStr = @"http://api.ibp.org.ua/";
         NSString *httpsStr = @"http://booking.ibp.org.ua/payment/pay?price=14560&description=Hello!/";
-        NSString *platezhka = @"https://test.plategka.com/services/gateway/";
+//        NSString *platezhka = @"https://test.plategka.com/services/gateway/";
         
-        controller.url = [NSURL URLWithString:testStr];
+        controller.url = [NSURL URLWithString:httpsStr];
     }
 }
 

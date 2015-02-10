@@ -43,6 +43,8 @@
     
     pricesManager = [[PricesManager alloc] init];
     
+    
+    
     // ActivityView
     [self.tableView setHidden:YES];
     UIView *viewToUse = self.view;
@@ -56,16 +58,6 @@
         [self removeActivityView];
     }];
 }
-
-//- (void)removeActivityView2 {
-//    NSDictionary *dict = [[SessionManager sharedManager] getRoutesWithDictionary:self.stationFrom to:self.stationTo forStartDate:self.startDate and:^(BOOL succes, id data, NSError *error) {
-//        
-//    }];
-//    routesArray = [dict objectForKey:@"items"];
-//    [self.tableView reloadData];
-//    [DejalActivityView removeView];
-//    [self.tableView setHidden:NO];
-//}
 
 // Показать таблицу, убрать загрузчик. Выполняет транзакцию получения рейсов
 - (void)removeActivityView {
@@ -132,19 +124,14 @@
     cell.labelNumber.text = [route objectForKey:@"number"];
     cell.labelRouteTitle.text = [[NSString stringWithFormat:@"%@ - %@", [route objectForKey:@"station_from"], [route objectForKey:@"station_to"]] capitalizedString];
     
-    // блок время
+    // блок время (косяк!)
     cell.labelDepartureDate.text = [NSString dateFromString:[route objectForKey:@"departure_date"]];
     cell.labelArrivalDate.text = [NSString dateFromString:[route objectForKey:@"arrival_date"]];
     cell.labelTravelTime.text = [NSString travelTimeFromString:[route objectForKey:@"travel_time"]];
     
-//    cell.labelDepartureDate.text = [route objectForKey:@"departure_date"];
-//    cell.labelArrivalDate.text = [route objectForKey:@"arrival_date"];
-//    cell.labelTravelTime.text = [route objectForKey:@"travel_time"];
-    
-    NSLog(@"\n\n\n%@", [route objectForKey:@"number"]);
+    NSLog(@"\n\n%@", [route objectForKey:@"number"]);
     NSLog(@"%@", [route objectForKey:@"departure_date"]);
     NSLog(@"%@", [route objectForKey:@"arrival_date"]);
-    NSLog(@"%@", [route objectForKey:@"travel_time"]);
     
     // блок цена
     cell.labelCost.text = nil;

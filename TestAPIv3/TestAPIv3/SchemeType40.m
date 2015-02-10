@@ -31,15 +31,9 @@
         [self addSubview:self.viewScheme];
         
         // Add button(s) a subview
-        
         for (UIButton *topButtons in self.buttonsTop) {
-            topButtons.backgroundColor = [UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1];;
-//            zoomButton.alpha = .75f;
-//            zoomButton.layer.borderColor = [UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0f].CGColor; // iOS tintBlueColor
-//            zoomButton.layer.borderWidth = 1;
+            topButtons.backgroundColor = [UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1];
             topButtons.layer.cornerRadius = 3;
-//            zoomButton.clipsToBounds = YES;
-//            zoomButton.titleLabel.font = [UIFont systemFontOfSize:13];
         }
         
         for (UIButton *lowButtons in self.buttonsLow) {
@@ -58,17 +52,12 @@
                 rect = CGRectMake(215, 173, 30, 30);
             }
             
-            
-            
             CustomButton *btn = [CustomButton buttonWithNumber:[[NSNumber numberWithInt:place] description] with:rect and:nil];
-    
             
             [self.viewScheme addSubview:btn];
             place++;
 //            continue;
         }
-        
-        
     }
     return self;
 }

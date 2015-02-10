@@ -21,17 +21,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-oP-Rfv">
-                    <rect key="frame" x="80" y="185" width="320" height="110"/>
+                    <rect key="frame" x="116" y="197" width="249" height="85"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="110" id="P0p-g5-4X8"/>
                         <constraint firstAttribute="width" constant="320" id="QUL-tq-H1L"/>
+                        <constraint firstAttribute="width" constant="249" id="ZXH-ar-mpA"/>
                         <constraint firstAttribute="height" constant="110" id="emI-ZB-IeV"/>
                         <constraint firstAttribute="width" constant="320" id="raP-ta-y8p"/>
+                        <constraint firstAttribute="height" constant="85" id="xxP-Sg-8Py"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="P0p-g5-4X8"/>
                             <exclude reference="QUL-tq-H1L"/>
                             <exclude reference="emI-ZB-IeV"/>
+                            <exclude reference="raP-ta-y8p"/>
                         </mask>
                     </variation>
                 </imageView>
@@ -39,6 +43,7 @@
             <color key="backgroundColor" red="0.30588235289999999" green="0.67843137249999996" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="FPW-oP-Rfv" secondAttribute="centerX" id="0XS-OK-Zcl"/>
+                <constraint firstAttribute="centerX" secondItem="FPW-oP-Rfv" secondAttribute="centerX" id="0o7-DX-KSN"/>
                 <constraint firstAttribute="centerY" secondItem="FPW-oP-Rfv" secondAttribute="centerY" id="7J1-TC-vPB"/>
                 <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="19" id="GTI-F1-fFP"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
@@ -47,12 +52,15 @@
                 <constraint firstAttribute="centerX" secondItem="FPW-oP-Rfv" secondAttribute="centerX" id="OHl-7q-9Yw"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
                 <constraint firstAttribute="centerY" secondItem="FPW-oP-Rfv" secondAttribute="centerY" id="fGF-Bw-uyv"/>
+                <constraint firstAttribute="centerY" secondItem="FPW-oP-Rfv" secondAttribute="centerY" id="wZp-TQ-VFg"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="xUO-qp-FFN"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="0XS-OK-Zcl"/>
+                    <exclude reference="7J1-TC-vPB"/>
                     <exclude reference="OHl-7q-9Yw"/>
                     <exclude reference="fGF-Bw-uyv"/>
                     <exclude reference="Kzo-t9-V3l"/>
@@ -64,6 +72,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo.png" width="498" height="170"/>
+        <image name="logo.png" width="249" height="85"/>
     </resources>
 </document>

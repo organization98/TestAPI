@@ -12,14 +12,16 @@
 
 + (NSString *)dateFromString:(NSString *)string {
     
+    
+    
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
-    [dateFormater setDateFormat:@"YYYY-MM-DD HH:MM:SS"];
+    [dateFormater setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; // YYYY-MM-DD hh:mm:ss
     
     NSDate *dateFromString = [[NSDate alloc] init];
     dateFromString = [dateFormater dateFromString:string];
     
     NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
-    [dateFormatter2 setDateFormat:@"EE, d MMM, hh:mm"];
+    [dateFormatter2 setDateFormat:@"EE, d MMM, HH:mm"];
     
     return [dateFormatter2 stringFromDate:dateFromString];
 }
