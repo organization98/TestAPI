@@ -18,6 +18,4 @@
 
 @property (nonatomic, strong) NSString *startDate;
 
-
-
 @end

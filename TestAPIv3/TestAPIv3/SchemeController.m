@@ -21,9 +21,9 @@
     [super viewDidLoad];
     self.navigationItem.title = NSStringFromClass([SchemeController class]);
     
-    self.scrollView.contentSize = CGSizeMake(1043, 211);
-    self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.showsVerticalScrollIndicator = NO;
+//    self.scrollView.contentSize = CGSizeMake(1043, 211);
+//    self.scrollView.showsHorizontalScrollIndicator = NO;
+//    self.scrollView.showsVerticalScrollIndicator = NO;
     
     // внешний вид кнопок "корзины", "купить"
     for (UIButton *buttons in self.buttonStyle) {
@@ -37,15 +37,22 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    self.scrollView.contentSize = CGSizeMake(1043, 211);
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    NSLog(@"W: %f, H: %f", self.scrollView.contentSize.width, self.scrollView.contentSize.height);
+}
+
 // передаем параметры в WebViewController
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showWebView"]) {
         WebViewController *controller = (WebViewController *)segue.destinationViewController;
         
         // Test URLs
-//        NSString *testStr = @"http://api.ibp.org.ua/";
+        NSString *testStr = @"http://api.ibp.org.ua/";
         NSString *httpsStr = @"http://booking.ibp.org.ua/payment/pay?price=14560&description=Hello!/";
-//        NSString *platezhka = @"https://test.plategka.com/services/gateway/";
+        NSString *platezhka = @"https://test.plategka.com/services/gateway/";
         
         controller.url = [NSURL URLWithString:httpsStr];
     }

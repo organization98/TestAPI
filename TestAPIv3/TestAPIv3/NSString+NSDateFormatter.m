@@ -12,16 +12,19 @@
 
 + (NSString *)dateFromString:(NSString *)string {
     
-    
-    
-    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
-    [dateFormater setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; // YYYY-MM-DD hh:mm:ss
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; // YYYY-MM-DD hh:mm:ss
     
     NSDate *dateFromString = [[NSDate alloc] init];
-    dateFromString = [dateFormater dateFromString:string];
+    dateFromString = [dateFormatter dateFromString:string];
+    
+    NSLocale *ruLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"ru_RU"];
+    NSLocale *ukLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"uk_UA"];
+    NSLocale *enLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     
     NSDateFormatter *dateFormatter2 = [[NSDateFormatter alloc] init];
-    [dateFormatter2 setDateFormat:@"EE, d MMM, HH:mm"];
+    [dateFormatter2 setLocale:ruLocale];
+    [dateFormatter2 setDateFormat:@"E, d MMM, HH:mm"];
     
     return [dateFormatter2 stringFromDate:dateFromString];
 }

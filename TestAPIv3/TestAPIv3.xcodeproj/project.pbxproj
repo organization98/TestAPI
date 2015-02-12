@@ -70,9 +70,9 @@
 		32A069661A766C7400015743 /* RoutesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069651A766C7400015743 /* RoutesController.m */; };
 		32A0696A1A7670AB00015743 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A069691A7670AB00015743 /* SessionManager.m */; };
 		32B3B0851A81EA90006C1CC8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B3B0841A81EA90006C1CC8 /* WebViewController.m */; };
-		32BB05421A8A1B89009399BF /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BB053F1A8A1B89009399BF /* logo.png */; };
-		32BB05431A8A1B89009399BF /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BB05401A8A1B89009399BF /* logo@2x.png */; };
-		32BB05441A8A1B89009399BF /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32BB05411A8A1B89009399BF /* logo@3x.png */; };
+		32E9227C1A8B69DA00E1E613 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E922791A8B69D900E1E613 /* logo.png */; };
+		32E9227D1A8B69DA00E1E613 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9227A1A8B69DA00E1E613 /* logo@2x.png */; };
+		32E9227E1A8B69DA00E1E613 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9227B1A8B69DA00E1E613 /* logo@3x.png */; };
 		32F60CD01A7B466A00FD273A /* Kupe40.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F60CCD1A7B466A00FD273A /* Kupe40.png */; };
 		32F60CD11A7B466A00FD273A /* Kupe40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F60CCE1A7B466A00FD273A /* Kupe40@2x.png */; };
 		32F60CD21A7B466A00FD273A /* Kupe40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 32F60CCF1A7B466A00FD273A /* Kupe40@3x.png */; };
@@ -191,9 +191,9 @@
 		32A069691A7670AB00015743 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
 		32B3B0831A81EA90006C1CC8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		32B3B0841A81EA90006C1CC8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		32BB053F1A8A1B89009399BF /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		32BB05401A8A1B89009399BF /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
-		32BB05411A8A1B89009399BF /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
+		32E922791A8B69D900E1E613 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Resources/logo.png; sourceTree = "<group>"; };
+		32E9227A1A8B69DA00E1E613 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "Resources/logo@2x.png"; sourceTree = "<group>"; };
+		32E9227B1A8B69DA00E1E613 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@3x.png"; path = "Resources/logo@3x.png"; sourceTree = "<group>"; };
 		32F60CCD1A7B466A00FD273A /* Kupe40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Kupe40.png; path = Resources/Cars/Kupe40.png; sourceTree = "<group>"; };
 		32F60CCE1A7B466A00FD273A /* Kupe40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kupe40@2x.png"; path = "Resources/Cars/Kupe40@2x.png"; sourceTree = "<group>"; };
 		32F60CCF1A7B466A00FD273A /* Kupe40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kupe40@3x.png"; path = "Resources/Cars/Kupe40@3x.png"; sourceTree = "<group>"; };
@@ -369,6 +369,9 @@
 		3270CD4B1A78FD75004C27CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32E922791A8B69D900E1E613 /* logo.png */,
+				32E9227A1A8B69DA00E1E613 /* logo@2x.png */,
+				32E9227B1A8B69DA00E1E613 /* logo@3x.png */,
 				328420DF1A85084C006F4F8A /* time.png */,
 				328420E01A85084C006F4F8A /* time@2x.png */,
 				328420E11A85084C006F4F8A /* time@3x.png */,
@@ -380,9 +383,6 @@
 				32F60CCD1A7B466A00FD273A /* Kupe40.png */,
 				32F60CCE1A7B466A00FD273A /* Kupe40@2x.png */,
 				32F60CCF1A7B466A00FD273A /* Kupe40@3x.png */,
-				32BB053F1A8A1B89009399BF /* logo.png */,
-				32BB05401A8A1B89009399BF /* logo@2x.png */,
-				32BB05411A8A1B89009399BF /* logo@3x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -557,7 +557,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				328420D91A8507E6006F4F8A /* RobotoCondensed-Bold.ttf in Resources */,
-				32BB05431A8A1B89009399BF /* logo@2x.png in Resources */,
 				328420D51A8507E6006F4F8A /* Roboto-MediumItalic.ttf in Resources */,
 				32A0694A1A7668E100015743 /* Main.storyboard in Resources */,
 				32A0694F1A7668E100015743 /* LaunchScreen.xib in Resources */,
@@ -567,22 +566,23 @@
 				320407031A7BA378006D12DC /* forward-seat@2x.png in Resources */,
 				328420DB1A8507E6006F4F8A /* RobotoCondensed-Italic.ttf in Resources */,
 				328420DC1A8507E6006F4F8A /* RobotoCondensed-Light.ttf in Resources */,
+				32E9227E1A8B69DA00E1E613 /* logo@3x.png in Resources */,
 				32F60CD11A7B466A00FD273A /* Kupe40@2x.png in Resources */,
 				328420DD1A8507E6006F4F8A /* RobotoCondensed-LightItalic.ttf in Resources */,
-				32BB05421A8A1B89009399BF /* logo.png in Resources */,
 				328420D71A8507E6006F4F8A /* Roboto-Thin.ttf in Resources */,
 				3270CD4A1A78DEEB004C27CE /* RoutesCustomCell.xib in Resources */,
 				328420D41A8507E6006F4F8A /* Roboto-Medium.ttf in Resources */,
 				328420D11A8507E6006F4F8A /* Roboto-Italic.ttf in Resources */,
-				32BB05441A8A1B89009399BF /* logo@3x.png in Resources */,
 				32A0694C1A7668E100015743 /* Images.xcassets in Resources */,
 				328420D21A8507E6006F4F8A /* Roboto-Light.ttf in Resources */,
 				320407021A7BA378006D12DC /* forward-seat.png in Resources */,
 				328420CD1A8507E6006F4F8A /* Roboto-Black.ttf in Resources */,
 				328420E51A85084C006F4F8A /* time@3x.png in Resources */,
 				32F60CD21A7B466A00FD273A /* Kupe40@3x.png in Resources */,
+				32E9227C1A8B69DA00E1E613 /* logo.png in Resources */,
 				3260B6F01A862561003F88FD /* WagonTypes.plist in Resources */,
 				320407001A7BA378006D12DC /* forward-seat-orange.png in Resources */,
+				32E9227D1A8B69DA00E1E613 /* logo@2x.png in Resources */,
 				328420CF1A8507E6006F4F8A /* Roboto-Bold.ttf in Resources */,
 				32F60CD71A7B74D200FD273A /* SchemeType40.xib in Resources */,
 				328420E31A85084C006F4F8A /* time.png in Resources */,

@@ -135,16 +135,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nun-Cr-Tik">
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nun-Cr-Tik">
                                 <rect key="frame" x="16" y="154" width="288" height="211"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o50-kM-N08" customClass="SchemeType40">
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o50-kM-N08" customClass="SchemeType40">
                                         <rect key="frame" x="0.0" y="0.0" width="1043" height="211"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1043" id="4u9-4M-KIM"/>
+                                            <constraint firstAttribute="height" constant="211" id="DAI-uO-kJ3"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="o50-kM-N08" secondAttribute="bottom" id="2dW-4N-Usy"/>
+                                    <constraint firstItem="o50-kM-N08" firstAttribute="top" secondItem="nun-Cr-Tik" secondAttribute="top" id="K2R-Iw-p2O"/>
+                                    <constraint firstItem="o50-kM-N08" firstAttribute="leading" secondItem="nun-Cr-Tik" secondAttribute="leading" id="O2t-zo-6pQ"/>
                                     <constraint firstAttribute="height" constant="211" id="oTX-ud-aW8"/>
+                                    <constraint firstAttribute="trailing" secondItem="o50-kM-N08" secondAttribute="trailing" constant="-755" id="xaz-yZ-mYM"/>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="414,09 грн. Сидячий 1-й класс" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xS2-JG-XDW">

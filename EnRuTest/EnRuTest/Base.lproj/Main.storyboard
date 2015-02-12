@@ -19,10 +19,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="esj-rD-Ie8">
+                                <rect key="frame" x="70" y="224" width="180" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="esj-rD-Ie8" id="ty7-Wu-093"/>
                         <outlet property="label" destination="73G-4d-TWD" id="fp5-gb-ebe"/>
                     </connections>
                 </viewController>

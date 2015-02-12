@@ -22,10 +22,10 @@
     [btn setFrame:rect];
     [btn setTitle:number
          forState:UIControlStateNormal];
-//    [btn setTitle:number
-//         forState:UIControlStateSelected];
-//    [btn setTitle:number
-//         forState:UIControlStateDisabled];
+    [btn setTitle:number
+         forState:UIControlStateSelected];
+    [btn setTitle:number
+         forState:UIControlStateDisabled];
     return btn;
 }
 
