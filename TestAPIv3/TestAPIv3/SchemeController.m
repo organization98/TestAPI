@@ -52,7 +52,7 @@
         NSString *testURL = @"http://api.ibp.org.ua/";
         NSString *plategkaURL = @"http://booking.ibp.org.ua/payment/pay?price=14560&description=Hello!/";
         
-        controller.url = [NSURL URLWithString:plategkaURL];
+        controller.url = [NSURL URLWithString:testURL];
     }
 }
 

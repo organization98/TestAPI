@@ -8,6 +8,7 @@
 
 #import "WebViewController.h"
 #import "NSURLRequest+IgnoreSSL.h"
+#import "NSString+ContainsStrModernizer.h"
 
 @interface WebViewController () 
 
@@ -63,16 +64,22 @@
     
     NSLog(@"URL: %@", [request URL].absoluteString);
     
+    // containsString - iOS8 method!
+    // iOS7 used NSString+ContainsStrModernizer category
     if ([[request URL].absoluteString containsString:@"index2.html"] == YES) {
+        NSLog(@"TEST");
         [self.navigationController popViewControllerAnimated:YES];
         return YES;
         
     } else if ([[request URL].absoluteString containsString:@"bad.html"] == YES) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Error payment" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                                        message:@"Error payment"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:nil];
         [alert show];
         return NO;
     }
-    
     return YES;
 }
 
