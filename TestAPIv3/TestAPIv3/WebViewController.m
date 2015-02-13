@@ -9,30 +9,40 @@
 #import "WebViewController.h"
 #import "NSURLRequest+IgnoreSSL.h"
 
-@interface WebViewController ()
+@interface WebViewController () 
 
 @end
 
 @implementation WebViewController
+/*
+{
+    BOOL isDone;
+    NSURLRequest *req;
+    NSURLConnection *conn;
+}
+*/
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = NSStringFromClass([WebViewController class]);
+    // webView
     self.webView.delegate = self;
     self.webView.scalesPageToFit = NO;
-    self.navigationItem.title = NSStringFromClass([WebViewController class]);
-    
     [self loadURL];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)loadURL {
     NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
     [self.webView loadRequest:request];
     [NSURLRequest allowsAnyHTTPSCertificateForHost:[self.url host]];
+    /*
+    req = [NSURLRequest requestWithURL:self.url];
+    [self.webView loadRequest:req];
+    */
 }
 
 #pragma mark - UIWebViewDelegate
@@ -65,5 +75,40 @@
     
     return YES;
 }
+
+/*
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if (!isDone) {
+        isDone = NO;
+        conn = [[NSURLConnection alloc] initWithRequest:req delegate:self startImmediately:YES];
+        [conn start];
+        return NO;
+    }
+    return YES;
+    
+}
+
+#pragma mark - NSURLConnectionDelegate
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    if ([challenge previousFailureCount] == 0) {
+        isDone = YES;
+        NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+        [challenge.sender useCredential:credential forAuthenticationChallenge:challenge];
+    } else {
+        [[challenge sender] cancelAuthenticationChallenge:challenge];
+    }
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    isDone = YES;
+    [self.webView loadRequest:req];
+    [conn cancel];
+}
+
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+    return [protectionSpace.authenticationMethod isEqual:NSURLAuthenticationMethodServerTrust];
+}
+*/
 
 @end
