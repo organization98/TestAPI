@@ -26,7 +26,7 @@
     }
 }
 
-// containsString: has been added in iOS8. We dynamically add this if we run on iOS 7.
+// containsString: has been added in iOS8. We dynamically add this if we run on iOS7.
 - (BOOL)pspdf_containsString:(NSString *)aString {
     return [self rangeOfString:aString].location != NSNotFound;
 }

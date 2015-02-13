@@ -12,7 +12,7 @@
 
 @interface NSString (PSPDFModernizer)
 
-// Added in iOS 8, retrofitted for iOS 7
+// Added in iOS8, retrofitted for iOS7
 - (BOOL)containsString:(NSString *)aString;
 
 @end

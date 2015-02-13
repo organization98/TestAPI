@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvM-yT-S7j">
+                                <rect key="frame" x="378" y="362" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNS-VF-UJz">
+                                <rect key="frame" x="378" y="400" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="double-inputs.png" translatesAutoresizingMaskIntoConstraints="NO" id="JA3-3t-Esg">
+                                <rect key="frame" x="20" y="234" width="280" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="TTT-AP-u9t"/>
+                                    <constraint firstAttribute="width" constant="280" id="eok-g8-rG7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="X64-Xt-zkd">
+                                <rect key="frame" x="36" y="80" width="249" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="Qho-Vv-cKd"/>
+                                    <constraint firstAttribute="height" constant="85" id="W1n-xg-2JY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car-from.png" translatesAutoresizingMaskIntoConstraints="NO" id="cFd-Ul-bFl">
+                                <rect key="frame" x="36" y="296" width="34" height="23"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car-from.png" translatesAutoresizingMaskIntoConstraints="NO" id="wp2-LS-wD5">
+                                <rect key="frame" x="36" y="245" width="34" height="23"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmH-J6-AZY">
+                                <rect key="frame" x="239" y="261" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="E6H-5g-oGA"/>
+                                    <constraint firstAttribute="width" constant="46" id="Fvz-Xb-S7m"/>
+                                </constraints>
+                                <state key="normal" image="change-arrows.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz0-7G-fku">
+                                <rect key="frame" x="94" y="293" width="137" height="30"/>
+                                <state key="normal" title="Куда">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-ab-GBx">
+                                <rect key="frame" x="94" y="242" width="137" height="30"/>
+                                <state key="normal" title="Откуда">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30588235289999999" green="0.67843137249999996" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="X64-Xt-zkd" secondAttribute="centerX" id="Szm-6T-WVV"/>
+                            <constraint firstAttribute="centerY" secondItem="lmH-J6-AZY" secondAttribute="centerY" id="f50-zj-9jG"/>
+                            <constraint firstItem="JA3-3t-Esg" firstAttribute="top" secondItem="X64-Xt-zkd" secondAttribute="bottom" constant="69" id="h4e-WA-lrl"/>
+                            <constraint firstAttribute="centerY" secondItem="JA3-3t-Esg" secondAttribute="centerY" id="lm9-uy-qtC"/>
+                            <constraint firstAttribute="centerX" secondItem="JA3-3t-Esg" secondAttribute="centerX" id="z81-Ej-62I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonChange" destination="lmH-J6-AZY" id="tgY-En-nJF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="301"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car-from.png" width="34" height="23"/>
+        <image name="change-arrows.png" width="26" height="32"/>
+        <image name="double-inputs.png" width="280" height="99"/>
+        <image name="logo.png" width="249" height="85"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
