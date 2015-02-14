@@ -12,14 +12,9 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *doubleButtonView;
-
-@property (weak, nonatomic) IBOutlet UIView *buttonDateDeparture;
-
-@property (weak, nonatomic) IBOutlet UILabel *labelFromStation;
-@property (weak, nonatomic) IBOutlet UILabel *labelToStation;
-
-- (IBAction)buttonFromStation:(id)sender;
-- (IBAction)buttonToStation:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonDateDeparture;
+@property (weak, nonatomic) IBOutlet UIButton *buttonFindTickets;
+@property (weak, nonatomic) IBOutlet UIButton *buttonChange;
 
 @end
 
@@ -32,33 +27,37 @@
     // MAIN VIEW
     self.view.backgroundColor = [UIColor colorWithHexString:@"#4BB179"];
     
+    // LOGO
+    UIImageView *logoView = [[UIImageView alloc]
+                             initWithFrame:CGRectMake((self.view.bounds.size.width - 249) / 2,
+                                                      (((self.view.bounds.size.height - 99) / 2) - 85) / 2,
+                                                      249,
+                                                      85)];
+    logoView.image = [UIImage imageNamed:@"logo"];
+    [self.view addSubview:logoView];
+    
     // DOUBLE BUTTON VIEW
-    self.doubleButtonView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"double-inputs"]];
-    
-    // BUTTONS: FROM, TO
-    self.buttonFrom.highlighted = [UIColor colorWithHexString:@"#48A26F"];
-    self.labelFromStation.text = @"Откуда";
-    
-    self.buttonTo.highlighted = [UIColor colorWithHexString:@"#48A26F"];
-    self.labelToStation.text = @"Куда";
+    self.doubleButtonView.backgroundColor = [UIColor colorWithHexString:@"#5EB885"];
+    self.doubleButtonView.layer.cornerRadius = 4.5f;
+    self.doubleButtonView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.doubleButtonView.layer.borderWidth = 2.f;
     
     // BUTTON DATE
     self.buttonDateDeparture.backgroundColor = [UIColor colorWithHexString:@"#5EB885"];
-    self.buttonDateDeparture.layer.cornerRadius = 3.f;
+    self.buttonDateDeparture.layer.cornerRadius = 4.5f;
     self.buttonDateDeparture.layer.borderColor = [UIColor whiteColor].CGColor;
     self.buttonDateDeparture.layer.borderWidth = 2.f;
     
     // BUTTON FIND TICKETS
     self.buttonFindTickets.backgroundColor = [UIColor whiteColor];
-    self.buttonFindTickets.layer.cornerRadius = 3.f;
+    self.buttonFindTickets.layer.cornerRadius = 4.5f;
     [self.buttonFindTickets setTitle:@"Найти билеты" forState:UIControlStateNormal];
     [self.buttonFindTickets.titleLabel setFont:[UIFont systemFontOfSize:16.f]];
     self.buttonFindTickets.tintColor = [UIColor colorWithHexString:@"#4BB179"];
     
-    
     // BUTTON CHANGE
-    self.buttonChange.backgroundColor = [UIColor colorWithHexString:@"#4BB179"];
-    self.buttonChange.layer.cornerRadius = 3.f;
+    self.buttonChange.backgroundColor = [UIColor colorWithHexString:@"#48A26F"];
+    self.buttonChange.layer.cornerRadius = 4.5f;
     self.buttonChange.layer.borderColor = [UIColor whiteColor].CGColor;
     self.buttonChange.layer.borderWidth = 2.f;
 }
@@ -68,11 +67,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonFromStation:(id)sender {
-    NSLog(@"FROM");
-}
-
-- (IBAction)buttonToStation:(id)sender {
-    NSLog(@"TO");
-}
 @end

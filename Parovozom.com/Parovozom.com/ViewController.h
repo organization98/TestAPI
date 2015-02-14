@@ -10,10 +10,6 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonChange;
-@property (weak, nonatomic) IBOutlet UIButton *buttonFrom;
-@property (weak, nonatomic) IBOutlet UIButton *buttonTo;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonFindTickets;
 
 @end
