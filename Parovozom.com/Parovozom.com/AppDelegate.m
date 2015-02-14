@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+ConvertHEX.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // инфо: http://www.appcoda.com/customize-navigation-status-bar-ios-7/
+    
+    // изменение цвета NavigationBar и цвета шрифта кнопок
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:@"#4BB179"]];
+    
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // изменение цвета Toolbar и цвета шрифта кнопок
+    [[UIToolbar appearance] setBarTintColor:[UIColor colorWithHexString:@"#4BB179"]];
+    [[UIToolbar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // изменение стиля StatusBar
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
