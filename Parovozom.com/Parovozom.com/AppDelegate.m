@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import "UIColor+ConvertHEX.h"
 
+// Base colors
+#define GlobalOceanGreenColor [UIColor colorWithHexString:@"#4BB179"] // base green
+#define GlobalWhiteColor [UIColor colorWithHexString:@"#FFFFFF"]
+#define SorbusColor [UIColor colorWithHexString:@"#F2854C"] // orange
+#define HintOfRedColor [UIColor colorWithHexString:@"#FAFAFA"] // base gray
+
 @interface AppDelegate ()
 
 @end
@@ -21,20 +27,20 @@
     // инфо: http://www.appcoda.com/customize-navigation-status-bar-ios-7/
     
     // изменение цвета NavigationBar и цвета шрифта кнопок
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithHexString:@"#4BB179"]];
+    [[UINavigationBar appearance] setBarTintColor:GlobalOceanGreenColor];
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+                                                           GlobalWhiteColor, NSForegroundColorAttributeName, nil]];
     
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTintColor:GlobalWhiteColor];
     
     // изменение цвета Toolbar и цвета шрифта кнопок
-    [[UIToolbar appearance] setBarTintColor:[UIColor colorWithHexString:@"#4BB179"]];
-    [[UIToolbar appearance] setTintColor:[UIColor whiteColor]];
+    [[UIToolbar appearance] setBarTintColor:GlobalOceanGreenColor];
+    [[UIToolbar appearance] setTintColor:GlobalWhiteColor];
     
-    // изменение стиля StatusBar
+    //    // изменение стиля StatusBar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;

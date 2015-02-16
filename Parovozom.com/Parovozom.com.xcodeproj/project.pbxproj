@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		322858DA1A7E3C6B00723AA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 322858D91A7E3C6B00723AA4 /* main.m */; };
 		322858DD1A7E3C6C00723AA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 322858DC1A7E3C6C00723AA4 /* AppDelegate.m */; };
-		322858E01A7E3C6C00723AA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322858DF1A7E3C6C00723AA4 /* ViewController.m */; };
+		322858E01A7E3C6C00723AA4 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322858DF1A7E3C6C00723AA4 /* MainController.m */; };
 		322858E31A7E3C6C00723AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322858E11A7E3C6C00723AA4 /* Main.storyboard */; };
 		322858E51A7E3C6C00723AA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322858E41A7E3C6C00723AA4 /* Images.xcassets */; };
 		322858E81A7E3C6C00723AA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 322858E61A7E3C6C00723AA4 /* LaunchScreen.xib */; };
@@ -33,6 +33,10 @@
 		3272E44E1A8F4469004811CF /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3272E44B1A8F4469004811CF /* calendar.png */; };
 		3272E44F1A8F4469004811CF /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3272E44C1A8F4469004811CF /* calendar@2x.png */; };
 		3272E4501A8F4469004811CF /* calendar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3272E44D1A8F4469004811CF /* calendar@3x.png */; };
+		329BEFA41A91B95800B61687 /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 329BEFA31A91B95800B61687 /* UIImage+ImageWithColor.m */; };
+		32ECC4D91A9056DD000EE957 /* FromStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC4D81A9056DD000EE957 /* FromStationController.m */; };
+		32ECC4DD1A90570D000EE957 /* ToStationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC4DC1A90570D000EE957 /* ToStationController.m */; };
+		32ECC4E11A90572D000EE957 /* DateDepartureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ECC4E01A90572D000EE957 /* DateDepartureController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +55,8 @@
 		322858D91A7E3C6B00723AA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		322858DB1A7E3C6C00723AA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		322858DC1A7E3C6C00723AA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		322858DE1A7E3C6C00723AA4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		322858DF1A7E3C6C00723AA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		322858DE1A7E3C6C00723AA4 /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		322858DF1A7E3C6C00723AA4 /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		322858E21A7E3C6C00723AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		322858E41A7E3C6C00723AA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		322858E71A7E3C6C00723AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -79,6 +83,14 @@
 		3272E44B1A8F4469004811CF /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		3272E44C1A8F4469004811CF /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
 		3272E44D1A8F4469004811CF /* calendar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@3x.png"; sourceTree = "<group>"; };
+		329BEFA21A91B95800B61687 /* UIImage+ImageWithColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithColor.h"; sourceTree = "<group>"; };
+		329BEFA31A91B95800B61687 /* UIImage+ImageWithColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithColor.m"; sourceTree = "<group>"; };
+		32ECC4D71A9056DD000EE957 /* FromStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FromStationController.h; sourceTree = "<group>"; };
+		32ECC4D81A9056DD000EE957 /* FromStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FromStationController.m; sourceTree = "<group>"; };
+		32ECC4DB1A90570D000EE957 /* ToStationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToStationController.h; sourceTree = "<group>"; };
+		32ECC4DC1A90570D000EE957 /* ToStationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToStationController.m; sourceTree = "<group>"; };
+		32ECC4DF1A90572D000EE957 /* DateDepartureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateDepartureController.h; sourceTree = "<group>"; };
+		32ECC4E01A90572D000EE957 /* DateDepartureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateDepartureController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +132,12 @@
 		322858D61A7E3C6B00723AA4 /* Parovozom.com */ = {
 			isa = PBXGroup;
 			children = (
-				322858DB1A7E3C6C00723AA4 /* AppDelegate.h */,
-				322858DC1A7E3C6C00723AA4 /* AppDelegate.m */,
-				3272E42A1A8F387F004811CF /* UIColor+ConvertHEX.h */,
-				3272E42B1A8F387F004811CF /* UIColor+ConvertHEX.m */,
-				322858DE1A7E3C6C00723AA4 /* ViewController.h */,
-				322858DF1A7E3C6C00723AA4 /* ViewController.m */,
+				32ECC4D41A905658000EE957 /* AppDelegate */,
+				32ECC4D51A905661000EE957 /* Utils */,
+				32ECC4D61A9056AC000EE957 /* MainController */,
+				32ECC4DA1A9056E2000EE957 /* FromStationController */,
+				32ECC4DE1A905712000EE957 /* ToStationController */,
+				32ECC4E21A905737000EE957 /* DateDepartureController */,
 				322858E11A7E3C6C00723AA4 /* Main.storyboard */,
 				322858E41A7E3C6C00723AA4 /* Images.xcassets */,
 				322858E61A7E3C6C00723AA4 /* LaunchScreen.xib */,
@@ -184,6 +196,62 @@
 				3272E43B1A8F3FB0004811CF /* logo@3x.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		32ECC4D41A905658000EE957 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				322858DB1A7E3C6C00723AA4 /* AppDelegate.h */,
+				322858DC1A7E3C6C00723AA4 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		32ECC4D51A905661000EE957 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3272E42A1A8F387F004811CF /* UIColor+ConvertHEX.h */,
+				3272E42B1A8F387F004811CF /* UIColor+ConvertHEX.m */,
+				329BEFA21A91B95800B61687 /* UIImage+ImageWithColor.h */,
+				329BEFA31A91B95800B61687 /* UIImage+ImageWithColor.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		32ECC4D61A9056AC000EE957 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				322858DE1A7E3C6C00723AA4 /* MainController.h */,
+				322858DF1A7E3C6C00723AA4 /* MainController.m */,
+			);
+			name = MainController;
+			sourceTree = "<group>";
+		};
+		32ECC4DA1A9056E2000EE957 /* FromStationController */ = {
+			isa = PBXGroup;
+			children = (
+				32ECC4D71A9056DD000EE957 /* FromStationController.h */,
+				32ECC4D81A9056DD000EE957 /* FromStationController.m */,
+			);
+			name = FromStationController;
+			sourceTree = "<group>";
+		};
+		32ECC4DE1A905712000EE957 /* ToStationController */ = {
+			isa = PBXGroup;
+			children = (
+				32ECC4DB1A90570D000EE957 /* ToStationController.h */,
+				32ECC4DC1A90570D000EE957 /* ToStationController.m */,
+			);
+			name = ToStationController;
+			sourceTree = "<group>";
+		};
+		32ECC4E21A905737000EE957 /* DateDepartureController */ = {
+			isa = PBXGroup;
+			children = (
+				32ECC4DF1A90572D000EE957 /* DateDepartureController.h */,
+				32ECC4E01A90572D000EE957 /* DateDepartureController.m */,
+			);
+			name = DateDepartureController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,10 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322858E01A7E3C6C00723AA4 /* ViewController.m in Sources */,
+				322858E01A7E3C6C00723AA4 /* MainController.m in Sources */,
 				3272E42C1A8F387F004811CF /* UIColor+ConvertHEX.m in Sources */,
 				322858DD1A7E3C6C00723AA4 /* AppDelegate.m in Sources */,
+				32ECC4DD1A90570D000EE957 /* ToStationController.m in Sources */,
 				322858DA1A7E3C6B00723AA4 /* main.m in Sources */,
+				329BEFA41A91B95800B61687 /* UIImage+ImageWithColor.m in Sources */,
+				32ECC4E11A90572D000EE957 /* DateDepartureController.m in Sources */,
+				32ECC4D91A9056DD000EE957 /* FromStationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
