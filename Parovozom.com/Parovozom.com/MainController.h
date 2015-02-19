@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Route.h"
 
 @interface MainController : UIViewController
 
-@property (strong, nonatomic) NSString *fromStation;
-@property (strong, nonatomic) NSString *toStation;
-@property (strong, nonatomic) NSString *dateDeparture;
+@property (strong, nonatomic) Route *route;
+
+@property (strong, nonatomic) NSString *stationFrom;
+@property (strong, nonatomic) NSString *stationTo;
+@property (strong, nonatomic) NSString *startDate;
 
 @end

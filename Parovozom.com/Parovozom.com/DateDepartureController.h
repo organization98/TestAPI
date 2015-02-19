@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DateDepartureControllerDelegate <NSObject>
+
+@required
+- (void)setDepartureDate:(NSDate *)date;
+
+@end
+
+
 @interface DateDepartureController : UIViewController
 
 @property (strong, nonatomic) NSString *dateDeparture;
+
+@property (nonatomic, strong) id <DateDepartureControllerDelegate> delegate;
 
 @end

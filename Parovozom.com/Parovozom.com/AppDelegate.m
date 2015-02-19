@@ -36,11 +36,12 @@
     
     [[UINavigationBar appearance] setTintColor:GlobalWhiteColor];
     
+    
     // изменение цвета Toolbar и цвета шрифта кнопок
     [[UIToolbar appearance] setBarTintColor:GlobalOceanGreenColor];
     [[UIToolbar appearance] setTintColor:GlobalWhiteColor];
     
-    //    // изменение стиля StatusBar
+    // изменение стиля StatusBar
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;

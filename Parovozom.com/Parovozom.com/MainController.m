@@ -7,15 +7,18 @@
 //
 
 #import "MainController.h"
+
+// categories
+#import "NSString+NSDateFormatter.h"
 #import "UIColor+ConvertHEX.h"
 #import "UIImage+ImageWithColor.h"
 
 // controllers
-#import "FromStationController.h"
-#import "ToStationController.h"
+#import "ChoiseStationController.h"
 #import "DateDepartureController.h"
+#import "RoutesController.h"
 
-@interface MainController ()
+@interface MainController () <ChoiseStationControllerDelegate, DateDepartureControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *doubleButtonView;
 
@@ -25,24 +28,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonDateDeparture;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFindTickets;
 
+@property (strong, nonatomic) NSString *direction;
+
 @end
 
-@implementation MainController {
-    
-    NSString *fromStation;
-    NSString *toStation;
-    NSString *dateDeparture;
-}
 
-@synthesize dateDeparture;
-@synthesize toStation;
-@synthesize fromStation;
+@implementation MainController
 
 - (void)viewDidLoad {
-    
-    self.fromStation = @"Откуда";
-    self.toStation = @"Куда";
-    self.dateDeparture = @"Дата отправления";
     
     [super viewDidLoad];
     
@@ -65,16 +58,18 @@
     self.doubleButtonView.layer.borderWidth = 2.f;
     
     // BUTTON FROM STATION
+    self.buttonFromStation.restorationIdentifier = @"from";
     [self.buttonFromStation setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#4BB179"]]
                                       forState:UIControlStateHighlighted];
     [self.buttonFromStation setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [self.buttonFromStation setTitle:fromStation forState:UIControlStateNormal];
+    [self.buttonFromStation setTitle:@"Откуда" forState:UIControlStateNormal];
     
     // BUTTON TO STATION
+    self.buttonToStation.restorationIdentifier = @"to";
     [self.buttonToStation setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#4BB179"]]
-                                      forState:UIControlStateHighlighted];
+                                    forState:UIControlStateHighlighted];
     [self.buttonToStation setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [self.buttonToStation setTitle:toStation forState:UIControlStateNormal];
+    [self.buttonToStation setTitle:@"Куда" forState:UIControlStateNormal];
     
     // BUTTON CHANGE
     self.buttonChange.backgroundColor = [UIColor colorWithHexString:@"#48A26F"];
@@ -90,7 +85,7 @@
     self.buttonDateDeparture.layer.borderColor = [UIColor whiteColor].CGColor;
     self.buttonDateDeparture.layer.borderWidth = 2.f;
     [self.buttonDateDeparture setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [self.buttonDateDeparture setTitle:self.dateDeparture forState:UIControlStateNormal];
+    [self.buttonDateDeparture setTitle:@"Дата отправления" forState:UIControlStateNormal];
     
     // BUTTON FIND TICKETS
     self.buttonFindTickets.backgroundColor = [UIColor whiteColor];
@@ -102,7 +97,18 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)buttonDateTitle:(NSString *)name {
+    [self.buttonDateDeparture setTitle:name forState:UIControlStateNormal];
+}
+
+- (void)buttonFromTitle:(NSString *)name {
+    [self.buttonFromStation setTitle:name forState:UIControlStateNormal];
+}
+
+- (void)buttonToTitle:(NSString *)name {
+    [self.buttonToStation setTitle:name forState:UIControlStateNormal];
 }
 
 // прячем navigationController в MainController
@@ -117,11 +123,40 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if([segue.identifier isEqualToString:@"showDateDeparture"]) {
+    if ([segue.identifier isEqualToString:@"showDateDeparture"]) {
         DateDepartureController *controller = (DateDepartureController *)segue.destinationViewController;
-        controller.dateDeparture = nil;
+        controller.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"showFromStation"]) {
+        ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
+        controller.delegate = self;
+        self.direction = @"from";
+    } else if ([segue.identifier isEqualToString:@"showToStation"]) {
+        ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
+        controller.delegate = self;
+        self.direction = @"to";
+    } else if ([segue.identifier isEqualToString:@"showRoutes"]) {
+        RoutesController *controller = (RoutesController *)segue.destinationViewController;
+        controller.stationFrom = self.stationFrom;
+        controller.stationTo = self.stationTo;
+        controller.startDate = @"2015-02-28"; //self.startDate; // нужно изменить формат даты для запроса
     }
+}
+
+// изменяем Title для кнопок From и To
+- (void)setStationName:(NSString *)name andCode:(NSString *)code {
+    if ([self.direction isEqual:@"from"]) {
+        [self buttonFromTitle:name];
+        self.stationFrom = code;
+    } else {
+        [self buttonToTitle:name];
+        self.stationTo = code;
+    }
+}
+
+// изменяем Title для кнопоки Departure Date
+- (void)setDepartureDate:(NSDate *)date {
+    [self buttonDateTitle:[NSString stringFromDate:date]];
+    self.startDate = [NSString stringWithFormat:@"%@", date];
 }
 
 @end
