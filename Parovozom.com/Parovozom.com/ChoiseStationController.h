@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainController.h"
+
+typedef void (^SetButtonTitle)(NSString *name, NSString *code);
 
 @protocol ChoiseStationControllerDelegate <NSObject>
 
 @required
 
 - (void)setStationName:(NSString *)name andCode:(NSString *)code;
-- (void)setDepartureDate:(NSString *)date;
 
 @end
 
@@ -21,5 +23,7 @@
 @interface ChoiseStationController : UIViewController
 
 @property (nonatomic, strong) id <ChoiseStationControllerDelegate> delegate;
+
+@property (copy, nonatomic) SetButtonTitle myBlock;
 
 @end

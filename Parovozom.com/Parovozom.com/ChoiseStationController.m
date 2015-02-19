@@ -76,10 +76,18 @@
 // Called after the user changes the selection.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Получить название станции и ее код
-    [self.delegate setStationName:[[stations objectAtIndex:indexPath.row] objectForKey:@"name"]
-                              andCode:[[stations objectAtIndex:indexPath.row] objectForKey:@"code"]];
+    
+    self.myBlock([[stations objectAtIndex:indexPath.row] objectForKey:@"name"],
+                 [[stations objectAtIndex:indexPath.row] objectForKey:@"code"]);
+//    
+//    [self.delegate setStationName:[[stations objectAtIndex:indexPath.row] objectForKey:@"name"]
+//                              andCode:[[stations objectAtIndex:indexPath.row] objectForKey:@"code"]];
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)setStationName:(NSString *)name andCode:(NSString *)code with:(SetButtonTitle)block {
+    
 }
 
 #pragma mark - UITextFieldDelegate

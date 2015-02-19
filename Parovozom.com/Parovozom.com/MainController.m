@@ -33,11 +33,23 @@
 @end
 
 
-@implementation MainController
+@implementation MainController {
+    SetButtonTitle block;
+}
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    block = ^(NSString *name, NSString *code) {
+        if ([self.direction isEqual:@"from"]) {
+            [self buttonFromTitle:name];
+            self.stationFrom = code;
+        } else {
+            [self buttonToTitle:name];
+            self.stationTo = code;
+        }
+    };
     
     // MAIN VIEW
     self.view.backgroundColor = [UIColor colorWithHexString:@"#4BB179"];
@@ -126,13 +138,16 @@
     if ([segue.identifier isEqualToString:@"showDateDeparture"]) {
         DateDepartureController *controller = (DateDepartureController *)segue.destinationViewController;
         controller.delegate = self;
+        
     } else if ([segue.identifier isEqualToString:@"showFromStation"]) {
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
-        controller.delegate = self;
+//        controller.delegate = self;
+        controller.myBlock = block;
         self.direction = @"from";
     } else if ([segue.identifier isEqualToString:@"showToStation"]) {
         ChoiseStationController *controller = (ChoiseStationController *)segue.destinationViewController;
-        controller.delegate = self;
+//        controller.delegate = self;
+        controller.myBlock = block;
         self.direction = @"to";
     } else if ([segue.identifier isEqualToString:@"showRoutes"]) {
         RoutesController *controller = (RoutesController *)segue.destinationViewController;
